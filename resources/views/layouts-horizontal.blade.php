@@ -12,10 +12,10 @@
     @section('content')
         @component('components.breadcrumb')
             @slot('li_1')
-                Horizontal
+                Home
             @endslot
             @slot('title')
-                Dashboards
+            Dashboards
             @endslot
         @endcomponent
 

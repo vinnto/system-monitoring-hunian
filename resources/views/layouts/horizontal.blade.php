@@ -5,19 +5,23 @@
             <div class="navbar-brand-box">
                 <a href="index" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{ URL::asset('build/images/logo.svg') }}" alt="" height="22">
+                        <img src="{{ asset('build/images/logo-simon.png') }}" alt="" height="50"
+                            class="auth-logo-dark" width="90px">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ URL::asset('build/images/logo-dark.png') }}" alt="" height="17">
+                        <img src="{{ asset('build/images/logo-simon.png') }}" alt="" height="50"
+                            class="auth-logo-dark" width="90px">
                     </span>
                 </a>
 
                 <a href="index" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ URL::asset('build/images/logo-light.svg') }}" alt="" height="22">
+                        <img src="{{ asset('build/images/logo-simon.png') }}" alt="" height="50"
+                            class="auth-logo-dark" width="90px">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ URL::asset('build/images/logo-light.png') }}" alt="" height="19">
+                        <img src="{{ asset('build/images/logo-simon.png') }}" alt="" height="50"
+                            class="auth-logo-dark" width="90px">
                     </span>
                 </a>
             </div>
@@ -26,14 +30,6 @@
                 data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
                 <i class="fa fa-fw fa-bars"></i>
             </button>
-
-            <!-- App Search-->
-            <form class="app-search d-none d-lg-block">
-                <div class="position-relative">
-                    <input type="text" class="form-control" placeholder="@lang('translation.Search')">
-                    <span class="bx bx-search-alt"></span>
-                </div>
-            </form>
         </div>
 
         <div class="d-flex">
@@ -63,29 +59,29 @@
                 <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     @switch(Session::get('lang'))
-                    @case('ru')
-                    <img src="{{ URL::asset('build/images/flags/russia.jpg') }}" alt="Header Language" height="16">
-                    <span class="align-middle">Russian</span>
-                    @break
+                        @case('ru')
+                            <img src="{{ URL::asset('build/images/flags/russia.jpg') }}" alt="Header Language" height="16">
+                            <span class="align-middle">Russian</span>
+                        @break
 
-                    @case('it')
-                    <img src="{{ URL::asset('build/images/flags/italy.jpg') }}" alt="Header Language" height="16">
-                    <span class="align-middle">Italian</span>
-                    @break
+                        @case('it')
+                            <img src="{{ URL::asset('build/images/flags/italy.jpg') }}" alt="Header Language" height="16">
+                            <span class="align-middle">Italian</span>
+                        @break
 
-                    @case('de')
-                    <img src="{{ URL::asset('build/images/flags/germany.jpg') }}" alt="Header Language" height="16">
-                    <span class="align-middle">German</span>
-                    @break
+                        @case('de')
+                            <img src="{{ URL::asset('build/images/flags/germany.jpg') }}" alt="Header Language" height="16">
+                            <span class="align-middle">German</span>
+                        @break
 
-                    @case('es')
-                    <img src="{{ URL::asset('build/images/flags/spain.jpg') }}" alt="Header Language" height="16">
-                    <span class="align-middle">Spanish</span>
-                    @break
+                        @case('es')
+                            <img src="{{ URL::asset('build/images/flags/spain.jpg') }}" alt="Header Language" height="16">
+                            <span class="align-middle">Spanish</span>
+                        @break
 
-                    @default
-                    <img src="{{ URL::asset('build/images/flags/us.jpg') }}" alt="Header Language" height="16">
-                    <span class="align-middle">English</span>
+                        @default
+                            <img src="{{ URL::asset('build/images/flags/us.jpg') }}" alt="Header Language" height="16">
+                            <span class="align-middle">English</span>
                     @endswitch
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
@@ -234,16 +230,9 @@
                     <a class="dropdown-item" href="contacts-profile"><i
                             class="bx bx-user font-size-16 align-middle me-1"></i> <span
                             key="t-profile">@lang('translation.Profile')</span></a>
-                    <a class="dropdown-item" href="#"><i
-                            class="bx bx-wallet font-size-16 align-middle me-1"></i> <span
-                            key="t-my-wallet">@lang('translation.My_Wallet')</span></a>
                     <a class="dropdown-item d-block" href="#" data-bs-toggle="modal"
-                        data-bs-target=".change-password"><span class="badge bg-success float-end">11</span><i
-                            class="bx bx-wrench font-size-16 align-middle me-1"></i> <span
-                            key="t-settings">@lang('translation.Settings')</span></a>
-                    <a class="dropdown-item" href="#"><i
-                            class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span
-                            key="t-lock-screen">@lang('translation.Lock_screen')</span></a>
+                        data-bs-target=".change-password"><i class="bx bx-wrench font-size-16 align-middle me-1"></i>
+                        <span key="t-settings">@lang('translation.Settings')</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="javascript:void();"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
@@ -273,16 +262,16 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard"
-                            role="button">
+                        <a class="nav-link dropdown-toggle arrow-none" href="{{ route('user.dashboard') }}"
+                            id="topnav-dashboard" role="button">
                             <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">@lang('translation.Dashboards')</span>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-uielement"
-                            role="button">
-                            <i class="bx bx-tone me-2"></i>
+                        <a class="nav-link dropdown-toggle arrow-none" href="{{ route('user.monitoring.mandiri') }}"
+                            id="topnav-uielement" role="button">
+                            <i class="bx bx-buildings me-2"></i>
                             <span key="t-ui-elements">Monitoring Mandiri</span>
                         </a>
                     </li>
@@ -290,14 +279,14 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages"
                             role="button">
-                            <i class="bx bx-customize me-2"></i><span key="t-apps">Pengalihan Unit</span>
+                            <i class="bx bx-clinic me-2"></i><span key="t-apps">Pengalihan Unit</span>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components"
                             role="button">
-                            <i class="bx bx-collection me-2"></i><span key="t-components">Bantuan</span>
+                            <i class="bx bx-help-circle me-2"></i><span key="t-components">Bantuan</span>
                         </a>
                     </li>
                 </ul>

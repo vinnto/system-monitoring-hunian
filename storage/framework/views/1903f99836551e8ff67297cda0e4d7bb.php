@@ -12,10 +12,10 @@
     <?php $__env->startSection('content'); ?>
         <?php $__env->startComponent('components.breadcrumb'); ?>
             <?php $__env->slot('li_1'); ?>
-                Horizontal
+                Home
             <?php $__env->endSlot(); ?>
             <?php $__env->slot('title'); ?>
-                Dashboards
+            Dashboards
             <?php $__env->endSlot(); ?>
         <?php echo $__env->renderComponent(); ?>
 

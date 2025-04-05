@@ -9,6 +9,8 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Admin\ClarificationController;
 use App\Http\Controllers\Admin\PenerimaManfaatController;
 use App\Http\Controllers\Admin\MonitoringHunianController;
+use App\Http\Controllers\User\DashboardController as UserDashboardController;
+use App\Http\Controllers\User\MonitoringMandiriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,8 @@ use App\Http\Controllers\Admin\MonitoringHunianController;
 
 Auth::routes(['verify' => true]);
 
+
+// Route Admin
 
 // login route
 Route::get('/', [LoginController::class, 'index'])->name('auth.login');
@@ -44,10 +48,28 @@ Route::get('/detail-hunian', [MonitoringHunianController::class, 'detailHunian']
 // clarification route
 Route::get('/klarifikasi', [ClarificationController::class, 'index'])->name('admin.clarification');
 
-// penerima-manfaat rouote
+// penerima-manfaat route
 Route::get('/penerima-manfaat', [PenerimaManfaatController::class, 'index'])->name('admin.penerima.manfaat');
 
 Route::get('/profile-penerima-manfaat', [PenerimaManfaatController::class, 'profile'])->name('admin.profile.penerima.manfaat');
+
+// End Route Admin
+
+
+// Route User
+
+// dashboard route
+Route::get('/user', [UserDashboardController::class, 'index'])->name('user.dashboard');
+
+// monitoring mandiri route
+Route::get('/monitoring-mandiri', [MonitoringMandiriController::class, 'index'])->name('user.monitoring.mandiri');
+
+
+// End Route User
+
+
+
+
 
 // home route
 // Route::get('/home', [HomeController::class, 'root'])->name('root');
