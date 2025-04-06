@@ -64,6 +64,11 @@ Route::get('/user', [UserDashboardController::class, 'index'])->name('user.dashb
 // monitoring mandiri route
 Route::get('/monitoring-mandiri', [MonitoringMandiriController::class, 'index'])->name('user.monitoring.mandiri');
 
+// profile penerima manfaat
+Route::get('/profile-pm', [UserDashboardController::class, 'profilePenerimaManfaat'])->name('user.profile.penerima.manfaat');
+
+// bantuan
+Route::get('/help', [UserDashboardController::class, 'help'])->name('user.help');
 
 // End Route User
 

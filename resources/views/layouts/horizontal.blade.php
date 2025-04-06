@@ -227,12 +227,9 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="contacts-profile"><i
-                            class="bx bx-user font-size-16 align-middle me-1"></i> <span
-                            key="t-profile">@lang('translation.Profile')</span></a>
                     <a class="dropdown-item d-block" href="#" data-bs-toggle="modal"
-                        data-bs-target=".change-password"><i class="bx bx-wrench font-size-16 align-middle me-1"></i>
-                        <span key="t-settings">@lang('translation.Settings')</span></a>
+                        data-bs-target=".profile-pm"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span
+                            key="t-profile">@lang('translation.Profile')</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="javascript:void();"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
@@ -284,7 +281,7 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components"
+                        <a class="nav-link dropdown-toggle arrow-none" href="{{ route('user.help') }}" id="topnav-components"
                             role="button">
                             <i class="bx bx-help-circle me-2"></i><span key="t-components">Bantuan</span>
                         </a>
@@ -295,7 +292,113 @@
     </div>
 </div>
 
-<!--  Change-Password example -->
+<!--  Profile Penerima Manfaat -->
+<div class="modal fade profile-pm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" id="profile-pm">
+                    @csrf
+                    <div class="col-md-12 d-flex flex-column align-items-center">
+                        <h5 class="text-muted mb-3">PROFILE</h5>
+                        <div class="bg-light rounded-circle p-4 mb-3"
+                            style="width: 180px; height: 180px; display: flex; align-items: center; justify-content: center;">
+                            <div class="text-center">
+                                <i class="bi bi-image" style="font-size: 64px;"></i>
+                                <!-- Or use SVG for image placeholder -->
+                                <svg width="64" height="64" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                    <path
+                                        d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="fw-bold mb-1">Lokasi Hunian:</p>
+                        <p class="mb-1">Tower Samawa Lt. 01 No. 02</p>
+                        <p>Nuansa Pondok Kelapa</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama</label>
+                            <input type="text" class="form-control bg-light" id="name" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control bg-light" id="email" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">No. Telp</label>
+                            <input type="text" class="form-control bg-light" id="phone" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="job" class="form-label">Pekerjaan</label>
+                            <input type="text" class="form-control bg-light" id="job" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workAddress" class="form-label">Alamat Pekerjaan</label>
+                            <input type="text" class="form-control bg-light" id="workAddress" readonly>
+                        </div>
+                        <div class="d-flex justify-content-center mt-4">
+                            <a href="#" class="btn btn-outline-primary me-3" data-bs-toggle="modal"
+                                data-bs-target=".edit-profile">Ubah Profil</a>
+                            <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target=".change-password">Ganti Password</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Edit Profile Modal (Added to match the UI shown in image) -->
+<div class="modal fade edit-profile" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" id="edit-profile-form">
+                    @csrf
+                    <input type="hidden" value="#" id="profile_id">
+                    <div class="mb-3">
+                        <label for="edit_name">Nama</label>
+                        <input id="edit_name" type="text" class="form-control" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_email">Email</label>
+                        <input id="edit_email" type="email" class="form-control" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_phone">No. Telp</label>
+                        <input id="edit_phone" type="text" class="form-control" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_job">Pekerjaan</label>
+                        <input id="edit_job" type="text" class="form-control" name="job">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_work_address">Alamat Pekerjaan</label>
+                        <input id="edit_work_address" type="text" class="form-control" name="work_address">
+                    </div>
+                    <div class="mt-3 d-grid">
+                        <button class="btn btn-primary waves-effect waves-light" type="submit">Update
+                            Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Change-Password Modal -->
 <div class="modal fade change-password" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">

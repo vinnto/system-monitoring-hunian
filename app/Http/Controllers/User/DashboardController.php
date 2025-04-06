@@ -11,4 +11,14 @@ class DashboardController extends Controller
     {
         return view('pages.user.dashboard');
     }
+
+    public function profilePenerimaManfaat()
+    {
+        return view('pages.user.profile-pm');
+    }
+
+    public function help()
+    {
+        return view('pages.user.help');
+    }
 }

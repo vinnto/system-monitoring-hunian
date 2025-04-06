@@ -19,7 +19,7 @@
             <?php $__env->endSlot(); ?>
         <?php echo $__env->renderComponent(); ?>
 
-        <div class="row">
+        <div class="row mb-3">
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -30,40 +30,99 @@
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
+                    <!-- Slide 1 -->
                     <div class="carousel-item active">
-                        <img src="<?php echo e(asset('build/images/laptop-img.png')); ?>" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                        <div class="carousel-image-wrapper">
+                            <img src="<?php echo e(asset('build/images/slide1.png')); ?>" alt="Slide 1" class="border">
                         </div>
                     </div>
+                    <!-- Slide 2 -->
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                        <div class="carousel-image-wrapper">
+                            <img src="<?php echo e(asset('build/images/slide2.png')); ?>" alt="Slide 2" class="border">
                         </div>
                     </div>
+                    <!-- Slide 3 -->
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                        <div class="carousel-image-wrapper">
+                            <img src="<?php echo e(asset('build/images/slide3.png')); ?>" alt="Slide 3" class="border">
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
+
+        <!-- CSS yang diperlukan untuk mengatur ukuran gambar -->
+        <style>
+            /* Wrapper untuk gambar carousel */
+            .carousel-image-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-height: 500px;
+                /* Tinggi maksimum container */
+                overflow: hidden;
+                background-color: #f8f9fa;
+                /* Warna latar belakang */
+            }
+
+            /* Style untuk gambar di dalam carousel */
+            .carousel-image-wrapper img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                /* Menjaga aspek rasio asli tanpa memotong */
+                margin: 0 auto;
+                /* Posisi center */
+            }
+
+            /* Pastikan carousel responsif */
+            #carouselExampleCaptions {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            /* Atur indikator agar lebih terlihat */
+            .carousel-indicators {
+                bottom: 0;
+            }
+
+            /* Atur tombol kontrol agar lebih terlihat */
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 5%;
+                opacity: 0.8;
+            }
+
+            /* Tambahkan background pada tombol kontrol */
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 50%;
+                padding: 10px;
+            }
+
+            /* Gaya untuk gambar dengan sudut melengkung */
+            .carousel-image-wrapper img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                /* Menjaga aspek rasio asli tanpa memotong */
+                margin: 0 auto;
+                /* Posisi center */
+                border-radius: 15px;
+                /* Sudut melengkung pada gambar */
+            }
+
+            /* Optional: Tambahkan bayangan lembut untuk efek yang lebih baik */
+            .border {
+                border-radius: 15px;
+                /* Sudut melengkung pada border */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                /* Bayangan lembut */
+            }
+        </style>
 
         <div class="row">
             <div class="col-lg-12">
