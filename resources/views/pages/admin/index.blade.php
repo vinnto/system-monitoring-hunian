@@ -19,24 +19,41 @@
 @section('content')
     @component('components.breadcrumb')
         @slot('li_1')
-            Dashboards
+            Home
         @endslot
         @slot('title')
             Dashboard
         @endslot
     @endcomponent
 
-    {{--  Dashboard  --}}
+
+    {{--  Dashboard Page  --}}
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <div class="d-flex overflow-auto pb-3" style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
-                        <div class="card mini-stats-wid me-3" style="min-width: 260px; scroll-snap-align: start;">
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-md-8 col-9">
+                            <select class="form-select" id="idType" aria-label="Default select example">
+                                <option value="all">Periode</option>
+                                <option value="Full Time">2025 Semester 1</option>
+                                <option value="Part Time">2025 Semester 2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-3 text-end">
+                            <button type="button" class="btn btn-soft-primary w-100 w-md-auto" onclick="filterData();">
+                                <span class="d-none d-md-inline">Filter</span> <i
+                                    class="mdi mdi-filter-outline align-middle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex overflow-auto pb-3"
+                        style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">Total PM</p>
+                                        <p class="text-muted fw-medium">Total Penerima Manfaat</p>
                                         <h4 class="mb-0">0000</h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-center">
@@ -49,8 +66,7 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="card mini-stats-wid me-3" style="min-width: 260px; scroll-snap-align: start;">
+                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div class="flex-grow-1">
@@ -67,8 +83,7 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="card mini-stats-wid me-3" style="min-width: 260px; scroll-snap-align: start;">
+                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div class="flex-grow-1">
@@ -85,8 +100,7 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="card mini-stats-wid me-3" style="min-width: 260px; scroll-snap-align: start;">
+                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div class="flex-grow-1">
@@ -103,8 +117,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="card mini-stats-wid me-3" style="min-width: 260px; scroll-snap-align: start;">
+
+                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div class="flex-grow-1">
@@ -121,8 +135,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="card mini-stats-wid me-3" style="min-width: 260px; scroll-snap-align: start;">
+
+                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div class="flex-grow-1">
@@ -139,8 +153,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="card mini-stats-wid" style="min-width: 260px; scroll-snap-align: start;">
+
+                        <div class="card mini-stats-wid" style="min-width: 300px; scroll-snap-align: start;">
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div class="flex-grow-1">

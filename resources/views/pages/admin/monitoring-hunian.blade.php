@@ -20,7 +20,7 @@
 @section('content')
     @component('components.breadcrumb')
         @slot('li_1')
-            Monitoring
+            Table Monitoring Hunian
         @endslot
         @slot('title')
             Monitoring Hunian
@@ -32,7 +32,7 @@
             <div class="card">
                 <div class="card-body border-bottom">
                     <div class="d-flex align-items-center">
-                        <h5 class="mb-0 card-title flex-grow-1">Monitoring Hunian</h5>
+                        <h5 class="mb-0 card-title flex-grow-1">Table Monitoring Hunian</h5>
                         <div class="col-xxl-2 col-lg-4">
                             <button type="button" class="btn btn-soft-primary w-100" onclick="filterData();"><i
                                     class="mdi mdi-filter-outline align-middle"></i> Filter</button>
@@ -114,7 +114,7 @@
                                     <td>36</td>
                                     <td><span class="badge bg-warning">Terindikasi</span></td>
                                     <td>
-                                        <a href="{{ route('admin.detail.hunian') }}" class="btn btn-sm btn-soft-primary"><i
+                                        <a href="{{ route('admin.detail.hunian') }}" class="btn btn-sm btn-soft-primary" title="Detail Hunian"><i
                                                 class="mdi mdi-eye-outline font-size-15"></i></a>
                                     </td>
                                 </tr>

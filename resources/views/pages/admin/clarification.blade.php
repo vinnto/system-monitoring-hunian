@@ -20,10 +20,10 @@
 @section('content')
     @component('components.breadcrumb')
         @slot('li_1')
-            Klarifikasi
+            Table Klarifikasi
         @endslot
         @slot('title')
-            Jadwal Klarifikasi
+            Klarifikasi
         @endslot
     @endcomponent
 
@@ -32,7 +32,7 @@
             <div class="card">
                 <div class="card-body border-bottom">
                     <div class="d-flex align-items-center">
-                        <h5 class="mb-0 card-title flex-grow-1">Klarifikasi</h5>
+                        <h5 class="mb-0 card-title flex-grow-1">Table Klarifikasi</h5>
                         <div class="col-xxl-2 col-lg-4">
                             <button type="button" class="btn btn-soft-primary w-100" onclick="filterData();"><i
                                     class="mdi mdi-filter-outline align-middle"></i> Filter</button>
@@ -109,13 +109,13 @@
                                     <td>Senin, 17 Maret 2025</td>
                                     <td>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#uploadHasilKlarifikasia"
-                                            class="btn btn-sm btn-soft-primary"><i
-                                                class="bx bx-calendar-event font-size-20"></i></a>
+                                            class="btn btn-sm btn-soft-primary" title="Edit Jadwal Klarifikasi"><i
+                                                class="bx bx-edit-alt font-size-20"></i></a>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#jadwalKlarifikasi"
-                                            class="btn btn-sm btn-soft-primary"><i
-                                                class="bx bx-link-alt font-size-20"></i></a>
+                                            class="btn btn-sm btn-soft-primary" title="Upload Hasil Klarifikasi"><i
+                                                class="bx bx-calendar-event font-size-20"></i></a>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#statusKetaatan"
-                                            class="btn btn-sm btn-soft-primary"><i
+                                            class="btn btn-sm btn-soft-primary" title="Edit Status Ketaatan"><i
                                                 class="bx bx-home-circle font-size-20"></i></a>
                                     </td>
                                 </tr>

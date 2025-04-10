@@ -20,7 +20,7 @@
 @section('content')
     @component('components.breadcrumb')
         @slot('li_1')
-            User
+            Table Penerima Manfaat
         @endslot
         @slot('title')
             Penerima Manfaat
@@ -32,7 +32,7 @@
             <div class="card">
                 <div class="card-body border-bottom">
                     <div class="d-flex align-items-center">
-                        <h5 class="mb-0 card-title flex-grow-1">Penerima Manfaat</h5>
+                        <h5 class="mb-0 card-title flex-grow-1">Table Penerima Manfaat</h5>
                         <div class="col-xxl-2 col-lg-4">
                             <button type="button" class="btn btn-soft-secondary w-100" onclick="filterData();"><i
                                     class="mdi mdi-filter-outline align-middle"></i> Filter</button>
@@ -88,7 +88,8 @@
                                     <td><span class="badge bg-success">true</span></td>
                                     <td>
                                         <a href="{{ route('admin.profile.penerima.manfaat') }}"
-                                            class="btn btn-sm btn-soft-primary"><i class="bx bx-user font-size-20"></i></a>
+                                            class="btn btn-sm btn-soft-primary" title="Profile Penerima Manfaat"><i
+                                                class="bx bx-user font-size-20"></i></a>
                                     </td>
                                 </tr>
                                 <tr>

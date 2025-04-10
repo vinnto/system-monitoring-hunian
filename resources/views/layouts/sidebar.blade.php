@@ -17,7 +17,7 @@
                 </li>
 
                 {{-- sidebar layouts  --}}
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <span class="badge rounded-pill bg-danger float-end" key="t-hot">@lang('translation.hot')</span>
                         <i class="bx bx-layout"></i>
@@ -44,7 +44,7 @@
                         <li>
                             <a href="javascript: void(0);" class="has-arrow" key="t-horizontal">@lang('translation.Horizontal')</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="layouts-horizontal" key="t-horizontal">@lang('translation.Horizontal')</a>
+                                <li><a href="{{ route('user.dashboard') }}" key="t-horizontal">@lang('translation.Horizontal')</a>
                                 </li>
                                 <li><a href="layouts-hori-topbar-light" key="t-topbar-light">@lang('translation.Topbar_Light')</a></li>
                                 <li><a href="layouts-hori-boxed-width" key="t-boxed-width">@lang('translation.Boxed_Width')</a></li>
@@ -55,7 +55,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
                 <li>
                     <a href="{{ route('admin.monitoring.hunian') }}">

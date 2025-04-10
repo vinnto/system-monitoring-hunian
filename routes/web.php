@@ -26,54 +26,54 @@ use App\Http\Controllers\User\MonitoringMandiriController;
 Auth::routes(['verify' => true]);
 
 
+Route::name('auth.')->group(function () {
+
+  // login route
+  Route::get('/', [LoginController::class, 'index'])->name('login');
+
+  // register route
+  Route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+  // reset password
+  Route::get('/forgot-password', [ForgotPasswordController::class, 'index'])->name('forgot.password');
+});
+
 // Route Admin
+Route::name('admin.')->group(function () {
 
-// login route
-Route::get('/', [LoginController::class, 'index'])->name('auth.login');
+  // dashboard route
+  Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-// register route
-Route::get('/register', [RegisterController::class, 'index'])->name('auth.register');
+  // monitoring-hunian route
+  Route::get('/monitoring-hunian', [MonitoringHunianController::class, 'index'])->name('monitoring.hunian');
 
-// reset password
-Route::get('/forgot-password', [ForgotPasswordController::class, 'index'])->name('auth.forgot.password');
+  Route::get('/detail-hunian', [MonitoringHunianController::class, 'detailHunian'])->name('detail.hunian');
 
-// dashboard route
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+  // clarification route
+  Route::get('/klarifikasi', [ClarificationController::class, 'index'])->name('clarification');
 
-// monitoring-hunian route
-Route::get('/monitoring-hunian', [MonitoringHunianController::class, 'index'])->name('admin.monitoring.hunian');
+  // penerima-manfaat route
+  Route::get('/penerima-manfaat', [PenerimaManfaatController::class, 'index'])->name('penerima.manfaat');
 
-Route::get('/detail-hunian', [MonitoringHunianController::class, 'detailHunian'])->name('admin.detail.hunian');
-
-// clarification route
-Route::get('/klarifikasi', [ClarificationController::class, 'index'])->name('admin.clarification');
-
-// penerima-manfaat route
-Route::get('/penerima-manfaat', [PenerimaManfaatController::class, 'index'])->name('admin.penerima.manfaat');
-
-Route::get('/profile-penerima-manfaat', [PenerimaManfaatController::class, 'profile'])->name('admin.profile.penerima.manfaat');
-
-// End Route Admin
+  Route::get('/profile-penerima-manfaat', [PenerimaManfaatController::class, 'profile'])->name('profile.penerima.manfaat');
+}); // End Route Admin
 
 
 // Route User
+Route::name('user.')->group(function () {
 
-// dashboard route
-Route::get('/user', [UserDashboardController::class, 'index'])->name('user.dashboard');
+  // dashboard route
+  Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
 
-// monitoring mandiri route
-Route::get('/monitoring-mandiri', [MonitoringMandiriController::class, 'index'])->name('user.monitoring.mandiri');
+  // monitoring mandiri route
+  Route::get('/monitoring-mandiri', [MonitoringMandiriController::class, 'index'])->name('monitoring.mandiri');
 
-// profile penerima manfaat
-Route::get('/profile-pm', [UserDashboardController::class, 'profilePenerimaManfaat'])->name('user.profile.penerima.manfaat');
+  // profile penerima manfaat
+  Route::get('/profile-pm', [UserDashboardController::class, 'profilePenerimaManfaat'])->name('profile.penerima.manfaat');
 
-// bantuan
-Route::get('/help', [UserDashboardController::class, 'help'])->name('user.help');
-
-// End Route User
-
-
-
+  // bantuan
+  Route::get('/help', [UserDashboardController::class, 'help'])->name('help');
+}); // End Route User
 
 
 // home route
