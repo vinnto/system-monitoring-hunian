@@ -202,7 +202,7 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h4 class="card-title mb-3">Status Monitoring</h4>
-                    <div id="pie-chart-1" class="chart-container" data-colors='["#28a745", "#dc3545"]'></div>
+                    <div id="pie-chart-1" class="chart-container" data-colors='["#34c38f", "#f46a6a"]'></div>
                 </div>
             </div>
         </div>
@@ -236,13 +236,12 @@
 
     <div class="row">
         <div class="row">
-
             <!-- Status Pemanggilan -->
             <div class="col-12 col-sm-6 col-xl-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
                         <h4 class="card-title mb-3">Status Pemanggilan</h4>
-                        <div id="pie-chart-2" class="chart-container" data-colors='["#28a745","#ffc107", "#dc3545"]'>
+                        <div id="pie-chart-2" class="chart-container" data-colors='["#34c38f","#f1b44c", "#f46a6a"]'>
                         </div>
                     </div>
                 </div>
@@ -253,7 +252,7 @@
                     <div class="card-body">
                         <h4 class="card-title mb-3">Alasan Tidak Menghuni</h4>
                         <div id="pie-chart-3" class="chart-container"
-                            data-colors='["#28a745","#0d6efd", "#ffc107", "#6c757d"]'></div>
+                            data-colors='["#34c38f","#556ee6", "#f1b44c", "#6c757d"]'></div>
                     </div>
                 </div>
             </div>
@@ -262,7 +261,7 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h4 class="card-title mb-3">Tempat Tinggal Saat Ini</h4>
-                        <div id="pie-chart-4" class="chart-container" data-colors='["#28a745","#0d6efd", "#ffc107"]'>
+                        <div id="pie-chart-4" class="chart-container" data-colors='["#34c38f","#556ee6", "#f1b44c"]'>
                         </div>
                     </div>
                 </div>
@@ -293,4 +292,4 @@
     <script src="<?php echo e(URL::asset('build/js/pages/tui-charts.init.js')); ?>"></script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views\pages\admin\index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views/pages/admin/index.blade.php ENDPATH**/ ?>

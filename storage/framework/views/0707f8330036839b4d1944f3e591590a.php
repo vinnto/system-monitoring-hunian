@@ -186,7 +186,7 @@
                 <div class="card-body">
                     <h4 class="card-title mb-4">Perkembangan Ketaatan</h4>
 
-                    <div id="line_chart_dashed" data-colors='["--bs-primary", "--bs-danger", "--bs-success"]'
+                    <div id="line_chart_dashed" data-colors='["--bs-success", "--bs-danger", "--bs-success"]'
                         class="apex-charts" dir="ltr"></div>
                 </div>
             </div>
@@ -198,19 +198,7 @@
                 <div class="card-body">
                     <div class="d-sm-flex flex-wrap">
                         <h4 class="card-title mb-4">Hasil Penilaian Ketaatan</h4>
-                        <div class="ms-auto">
-                            <ul class="nav nav-pills">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Week</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Month</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#">Year</a>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
 
                     <div id="stacked-column-chart" data-colors='["--bs-primary", "--bs-warning", "--bs-success"]'

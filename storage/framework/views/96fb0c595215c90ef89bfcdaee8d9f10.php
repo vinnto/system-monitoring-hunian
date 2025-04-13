@@ -32,7 +32,7 @@
                 <div class="card-body">
                     <h4 class="card-title mb-4">Dashed Line</h4>
 
-                    <div id="line_chart_dashed" data-colors='["--bs-primary", "--bs-danger", "--bs-success"]'
+                    <div id="line_chart_dashed" data-colors='["--bs-success", "--bs-warning", "--bs-danger"]'
                         class="apex-charts" dir="ltr"></div>
                 </div>
             </div>

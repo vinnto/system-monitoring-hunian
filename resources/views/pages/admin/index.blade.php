@@ -27,6 +27,26 @@
     @endcomponent
 
 
+    <style>
+        .chart-container {
+            width: 100%;
+            height: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chart-container {
+                height: 200px;
+            }
+        }
+    </style>
+
+
     {{--  Dashboard Page  --}}
     <div class="row">
         <div class="col-12">
@@ -180,13 +200,11 @@
 
     <div class="row">
         <!-- Status Monitoring -->
-        <div class="col-xl-4">
-            <div class="card">
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card h-100">
                 <div class="card-body">
-                    <h4 class="card-title mb-4">Status Monitoring</h4>
-                    <div id="pie-chart-1"
-                        data-colors='["--bs-primary","--bs-success", "--bs-danger", "--bs-info", "--bs-warning"]'
-                        dir="ltr"></div>
+                    <h4 class="card-title mb-3">Status Monitoring</h4>
+                    <div id="pie-chart-1" class="chart-container" data-colors='["#34c38f", "#f46a6a"]'></div>
                 </div>
             </div>
         </div>
@@ -197,7 +215,7 @@
                 <div class="card-body">
                     <h4 class="card-title mb-4">Perkembangan Ketaatan</h4>
 
-                    <div id="line_chart_dashed" data-colors='["--bs-primary", "--bs-danger", "--bs-success"]'
+                    <div id="line_chart_dashed" data-colors='["--bs-success", "--bs-warning", "--bs-danger"]'
                         class="apex-charts" dir="ltr"></div>
                 </div>
             </div>
@@ -211,7 +229,7 @@
                         <h4 class="card-title mb-5">Hasil Penilaian Ketaatan</h4>
                     </div>
 
-                    <div id="stacked-column-chart" data-colors='["--bs-primary", "--bs-warning", "--bs-success"]'
+                    <div id="stacked-column-chart" data-colors='["--bs-success", "--bs-warning", "--bs-danger"]'
                         class="apex-charts" dir="ltr"></div>
                 </div>
             </div>
@@ -219,38 +237,35 @@
     </div>
 
     <div class="row">
-        <!-- status klarifikasi -->
-        <div class="col-xl-4">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title mb-1">Status Klarifikasi</h4>
-                    <div id="pie-chart-2"
-                        data-colors='["--bs-primary","--bs-success", "--bs-danger", "--bs-info", "--bs-warning"]'
-                        dir="ltr"></div>
+        <div class="row">
+            <!-- Status Pemanggilan -->
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3">Status Pemanggilan</h4>
+                        <div id="pie-chart-2" class="chart-container" data-colors='["#34c38f","#f1b44c", "#f46a6a"]'>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- alasan tidak menghuni -->
-        <div class="col-xl-4">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title mb-1">Alasan Tidak Menghuni</h4>
-                    <div id="pie-chart-3"
-                        data-colors='["--bs-primary","--bs-success", "--bs-danger", "--bs-info", "--bs-warning"]'
-                        dir="ltr"></div>
+            <!-- Alasan Tidak Menghuni -->
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3">Alasan Tidak Menghuni</h4>
+                        <div id="pie-chart-3" class="chart-container"
+                            data-colors='["#34c38f","#556ee6", "#f1b44c", "#6c757d"]'></div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- tempat tinggal saat ini -->
-        <div class="col-xl-4">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title mb-1">Tempat Tinggal Saat ini</h4>
-                    <div id="pie-chart-4"
-                        data-colors='["--bs-primary","--bs-success", "--bs-danger", "--bs-info", "--bs-warning"]'
-                        dir="ltr"></div>
+            <!-- Tempat Tinggal Saat Ini -->
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3">Tempat Tinggal Saat Ini</h4>
+                        <div id="pie-chart-4" class="chart-container" data-colors='["#34c38f","#556ee6", "#f1b44c"]'>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

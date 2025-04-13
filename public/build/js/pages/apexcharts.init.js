@@ -150,7 +150,7 @@ if (lineChartdashedColors) {
                 show: false,
             },
         },
-        colors: ["#2E93fA", "#FF9800", "#CED4DC"],
+        colors: ["#34c38f", "#f1b44c", "#f46a6a"],
         dataLabels: {
             enabled: false,
         },
@@ -165,7 +165,7 @@ if (lineChartdashedColors) {
                 data: [450, 1400, 1200, 1250, 1050, 1200, 1050],
             },
             {
-                name: "Terindikasi Tidak Taat",
+                name: "Terindikasi",
                 data: [800, 930, 900, 930, 1300, 1320, 1325],
             },
             {

@@ -38,7 +38,6 @@ setTimeout(function () {
 }, 2000);
 
 // stacked column chart (hasil penilaian ketaatan)
-
 var linechartBasicColors = getChartColorsArray("stacked-column-chart");
 if (linechartBasicColors) {
     var options = {
@@ -98,7 +97,7 @@ if (linechartBasicColors) {
                 text: undefined,
             },
         },
-        colors: ["#2E93fA", "#FF9800", "#CED4DC"],
+        colors: ["#34c38f", "#f1b44c", "#f46a6a"],
         legend: {
             position: "bottom",
         },

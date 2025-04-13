@@ -9,8 +9,8 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Admin\ClarificationController;
 use App\Http\Controllers\Admin\PenerimaManfaatController;
 use App\Http\Controllers\Admin\MonitoringHunianController;
-use App\Http\Controllers\User\DashboardController as UserDashboardController;
 use App\Http\Controllers\User\MonitoringMandiriController;
+use App\Http\Controllers\User\DashboardController as UserDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ Route::name('admin.')->group(function () {
 Route::name('user.')->group(function () {
 
   // dashboard route
-  Route::get('/dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
+  Route::get('/user-dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
 
   // monitoring mandiri route
   Route::get('/monitoring-mandiri', [MonitoringMandiriController::class, 'index'])->name('monitoring.mandiri');

@@ -51,4 +51,4 @@
 <script src="<?php echo e(URL::asset('build/js/app.js')); ?>"></script>
 
 <?php echo $__env->yieldContent('script-bottom'); ?>
-<?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views\layouts\vendor-scripts.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views/layouts/vendor-scripts.blade.php ENDPATH**/ ?>

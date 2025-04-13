@@ -1,11 +1,3 @@
-/*
-Template Name: Skote - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: Tui charts init Js File
-*/
-
 // get colors array from the string
 function getChartColorsArray(chartId) {
     if (document.getElementById(chartId) !== null) {
@@ -1436,22 +1428,33 @@ $(window).resize(function () {
 document.addEventListener("DOMContentLoaded", function () {
     function createChartData(title, dataArray) {
         return {
-            categories: ["Browser"],
+            categories: ["Pie Chart"],
             series: dataArray,
             title: title,
         };
     }
 
+    function getChartColorsArray(chartId) {
+        var colors = document
+            .getElementById(chartId)
+            .getAttribute("data-colors");
+        if (colors) {
+            return JSON.parse(colors);
+        }
+        return [];
+    }
+
     function renderPieChart(chartId, chartData) {
         var pieChartColors = getChartColorsArray(chartId);
         if (pieChartColors) {
-            var pieChartWidth = $("#" + chartId).width();
             var container = document.getElementById(chartId);
+            var pieChartWidth = container.offsetWidth;
+            var pieChartHeight = container.offsetHeight;
 
             var options = {
                 chart: {
                     width: pieChartWidth,
-                    height: 380,
+                    height: pieChartHeight,
                     title: chartData.title,
                 },
                 tooltip: {
@@ -1459,12 +1462,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 series: {
                     label: {
-                        fontSize: "12px", // Menambahkan pengaturan ukuran font label
+                        fontSize: "12px",
                     },
                     formatter: function (value, chartType, data) {
-                        var maxLength = 15; // Membatasi panjang nama label
+                        var maxLength = 15;
                         if (data.name.length > maxLength) {
-                            return data.name.substring(0, maxLength) + "..."; // Memotong nama kategori yang panjang
+                            return data.name.substring(0, maxLength) + "...";
                         }
                         return data.name;
                     },
@@ -1481,9 +1484,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 title: {
                     color: "#8791af",
                 },
-                plot: {
-                    lineColor: "rgba(166, 176, 207, 0.1)",
-                },
                 legend: {
                     label: {
                         color: "#8791af",
@@ -1494,7 +1494,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
             };
 
-            // Register theme
             tui.chart.registerTheme("myTheme", theme);
             options.theme = "myTheme";
 
@@ -1507,103 +1506,46 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // pie chart (status monitoring)
     var chart1Data = createChartData("2025 Semester 1", [
-        {
-            name: "Sudah",
-            data: 46.02,
-        },
-        {
-            name: "Belum",
-            data: 20.47,
-        },
+        { name: "Sudah", data: 46.02 },
+        { name: "Belum", data: 20.47 },
     ]);
 
-    // pie chart (status klarifikasi)
     var chart2Data = createChartData("2025 Semester 2", [
-        {
-            name: "Selesai",
-            data: 15.63,
-        },
-        {
-            name: "Klarifikasi",
-            data: 52.35,
-        },
-        {
-            name: "Teguran 1",
-            data: 12.42,
-        },
-        {
-            name: "Teguran 2",
-            data: 8.75,
-        },
+        { name: "Undangan Klarifikasi", data: 52.35 },
+        { name: "Teguran 1", data: 12.42 },
+        { name: "Teguran 2", data: 8.75 },
     ]);
 
-    // pie chart (alasan tidan menghuni)
     var chart3Data = createChartData("2026 Semester 1", [
-        {
-            name: "PLK",
-            data: 40.12,
-        },
-        {
-            name: "D/P/N",
-            data: 23.68,
-        },
-        {
-            name: "PK",
-            data: 14.35,
-        },
-        {
-            name: "PJK",
-            data: 11.85,
-        },
+        { name: "Pindah Lokasi", data: 40.12 },
+        { name: "Dinas Keluar Kota/Negeri", data: 23.68 },
+        { name: "Peningkatan Ekonomi", data: 14.35 },
+        { name: "Jumlah Anggota Keluarga", data: 11.85 },
     ]);
 
-    // pie chart (tempat tinggal saat ini)
     var chart4Data = createChartData("2026 Semester 2", [
-        {
-            name: "Kontrak/Sewa",
-            data: 38.25,
-        },
-        {
-            name: "Rumah Keluarga",
-            data: 18.32,
-        },
-        {
-            name: "Rumah Milik",
-            data: 16.43,
-        },
+        { name: "Kontrak/Sewa", data: 38.25 },
+        { name: "Rumah Keluarga", data: 18.32 },
+        { name: "Rumah Milik", data: 16.43 },
     ]);
 
-    // Render Pie Charts dengan data berbeda
     var pieChart1 = renderPieChart("pie-chart-1", chart1Data);
     var pieChart2 = renderPieChart("pie-chart-2", chart2Data);
     var pieChart3 = renderPieChart("pie-chart-3", chart3Data);
     var pieChart4 = renderPieChart("pie-chart-4", chart4Data);
 
-    // Resize event listener
     $(window).resize(function () {
-        var pieChartWidth = $(".col-xl-4").width();
-        if (pieChart1)
-            pieChart1.resize({
-                width: pieChartWidth,
-                height: 350,
-            });
-        if (pieChart2)
-            pieChart2.resize({
-                width: pieChartWidth,
-                height: 350,
-            });
-        if (pieChart3)
-            pieChart3.resize({
-                width: pieChartWidth,
-                height: 350,
-            });
-        if (pieChart4)
-            pieChart4.resize({
-                width: pieChartWidth,
-                height: 350,
-            });
+        [pieChart1, pieChart2, pieChart3, pieChart4].forEach((chart, index) => {
+            if (chart) {
+                const containerId = `pie-chart-${index + 1}`;
+                const container = document.getElementById(containerId);
+                chart.resize({
+                    width: container.offsetWidth,
+                    height: container.offsetHeight,
+                });
+            }
+        });
     });
 });
 
