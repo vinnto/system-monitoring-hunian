@@ -1,10 +1,4 @@
-/*
-Template Name: Skote - Admin & Dashboard Template
-Author: Themesbrand
-Website: https://themesbrand.com/
-Contact: themesbrand@gmail.com
-File: contact user list Js File
-*/
+
 
 var url = "build/json/";
 var userListData = '';

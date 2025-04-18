@@ -86,8 +86,8 @@
                                     <td><span class="badge bg-success">true</span></td>
                                     <td>
                                         <a href="<?php echo e(route('admin.profile.penerima.manfaat')); ?>"
-                                            class="btn btn-sm btn-soft-primary" title="Profile Penerima Manfaat"><i
-                                                class="bx bx-user font-size-20"></i></a>
+                                            class="btn btn-sm btn-soft-success" title="Profile Penerima Manfaat"><i
+                                                class="bx bxs-user-detail font-size-20"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -100,7 +100,8 @@
                                     <td><span class="badge bg-danger">false</span></td>
                                     <td>
                                         <a href="<?php echo e(route('admin.profile.penerima.manfaat')); ?>"
-                                            class="btn btn-sm btn-soft-primary"><i class="bx bx-user font-size-20"></i></a>
+                                            class="btn btn-sm btn-soft-success"><i
+                                                class="bx bxs-user-detail font-size-20"></i></a>
                                     </td>
                                 </tr>
                             </tbody>

@@ -16,7 +16,7 @@
                     </a>
                 </li>
 
-                {{-- sidebar layouts  --}}
+                {{-- sidebar layouts --}}
                 {{-- <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <span class="badge rounded-pill bg-danger float-end" key="t-hot">@lang('translation.hot')</span>
@@ -73,10 +73,17 @@
 
                 <li>
                     <a href="{{ route('admin.penerima.manfaat') }}">
-                        <i class="bx bx-user-check"></i>
+                        <i class="bx bxs-user"></i>
                         <span key="t-jobs">Penerima Manfaat</span>
                     </a>
                 </li>
+
+                {{-- <li>
+                    <a href="{{ route('admin.roles') }}">
+                        <i class="bx bxs-user-rectangle"></i>
+                        <span key="t-jobs">Roles</span>
+                    </a>
+                </li> --}}
 
                 {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

@@ -114,8 +114,8 @@
                                     <td>36</td>
                                     <td><span class="badge bg-warning">Terindikasi</span></td>
                                     <td>
-                                        <a href="{{ route('admin.detail.hunian') }}" class="btn btn-sm btn-soft-primary" title="Detail Hunian"><i
-                                                class="mdi mdi-eye-outline font-size-15"></i></a>
+                                        <a href="{{ route('admin.detail.hunian') }}" class="btn btn-sm btn-soft-primary"
+                                            title="Detail Hunian"><i class="bx bx-user-pin font-size-20"></i></a>
                                     </td>
                                 </tr>
                             </tbody>

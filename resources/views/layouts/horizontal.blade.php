@@ -281,8 +281,8 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="{{ route('user.help') }}" id="topnav-components"
-                            role="button">
+                        <a class="nav-link dropdown-toggle arrow-none" href="{{ route('user.help') }}"
+                            id="topnav-components" role="button">
                             <i class="bx bx-help-circle me-2"></i><span key="t-components">Bantuan</span>
                         </a>
                     </li>

@@ -50,7 +50,7 @@
                                             <div class="pt-4">
                                                 <div class="mt-4">
                                                     <a href="#"
-                                                        class="btn btn-primary waves-effect waves-light btn-sm"
+                                                        class="btn btn-success waves-effect waves-light btn-sm"
                                                         data-bs-toggle="modal" data-bs-target="#editStatusPM">Edit
                                                         Status PM</a>
                                                 </div>
@@ -205,7 +205,7 @@
                                     <td><span class="badge bg-warning">Terindikasi</span></td>
                                     <td>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#lihatKuesioner"
-                                            class="btn btn-sm btn-soft-primary"><i
+                                            class="btn btn-sm btn-soft-success"><i
                                                 class="mdi mdi-eye-outline font-size-15"></i></a>
                                     </td>
                                 </tr>
@@ -264,7 +264,7 @@
                                     <td>Rabu, 09 Oktober 2025</td>
                                     <td>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#lihatHasilKlarifikasi"
-                                            class="btn btn-sm btn-soft-primary "><i
+                                            class="btn btn-sm btn-soft-success "><i
                                                 class="mdi mdi-eye-outline font-size-15"></i></a>
                                     </td>
                                 </tr>
@@ -282,11 +282,11 @@
     <div class="modal fade" id="editStatusPM" tabindex="-1" aria-labelledby="editStatusPMLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header position-relative">
                     <div class="row">
                         <div class="col">
                             <h5 class="text-start mb-3" style="font-size: 20px;">
-                                <i class="bx bx-user"> Benny Brood</i>
+                                <i class="bx bx-user"></i> Benny Brood
                             </h5>
                             <h5 class="text-start" style="font-size: 15px;">
                                 Tower Samawa Lt. 01 No. 02
@@ -296,7 +296,13 @@
                             </h5>
                         </div>
                     </div>
+
+                    <button type="button" class="btn btn-light border px-3 py-1 rounded-pill position-absolute"
+                        style="top: 10px; right: 10px;" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="bx bx-x fs-5 text-danger"></i>
+                    </button>
                 </div>
+
                 <div class="modal-body">
                     <form autocomplete="off" class="needs-validation createorder-form" id="createorder-form" novalidate>
                         <div class="row">
@@ -334,18 +340,18 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="text-start" style="font-size: 20px;">
-                                Tower Samawa Lt. 01 No. 02
-                            </h5>
-                            <h5 class="text-start" style="font-size: 20px;">
-                                Nuansa Pondok Kelapa
-                            </h5>
+                    <div class="d-flex justify-content-between align-items-start w-100">
+                        <div>
+                            <h5 class="mb-0" style="font-size: 20px;">Tower Samawa Lt. 01 No. 02</h5>
+                            <h5 class="mb-0" style="font-size: 20px;">Nuansa Pondok Kelapa</h5>
                         </div>
+                        <button type="button" class="btn btn-light border rounded-circle p-2 ms-3"
+                            data-bs-dismiss="modal" aria-label="Close">
+                            <i class="bx bx-x fs-4 text-danger"></i>
+                        </button>
                     </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <div class="modal-body">
                     <form autocomplete="off" class="needs-validation createorder-form" id="createorder-form" novalidate>
                         <div class="row">
@@ -387,13 +393,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="text-end">
-                                    <button type="button" class="btn btn-outline-secondary"
-                                        data-bs-dismiss="modal">Cancel</button>
-                                    <button type="submit" id="addNewOrder-btn" class="btn btn-success">Send</button>
-                                </div>
-                            </div>
                         </div>
                     </form>
                 </div>
@@ -420,6 +419,7 @@
                                             <h4 class="card-title">Hasil Kuesioner Monitoring</h4>
                                             <h5>Menara Samawa Nuansa Pondok Kelapa</h5>
                                         </div>
+
 
                                         <div class="mb-4">
                                             <h6 class="fw-bold">DATA HUNIAN</h6>
@@ -607,13 +607,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="text-end">
-                                    <button type="button" class="btn btn-outline-secondary"
-                                        data-bs-dismiss="modal">Cancel</button>
-                                    <button type="submit" id="addNewOrder-btn" class="btn btn-success">Send</button>
                                 </div>
                             </div>
                         </div>

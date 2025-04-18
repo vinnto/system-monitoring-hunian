@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Admin\ClarificationController;
 use App\Http\Controllers\Admin\PenerimaManfaatController;
 use App\Http\Controllers\Admin\MonitoringHunianController;
+use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\User\MonitoringMandiriController;
 use App\Http\Controllers\User\DashboardController as UserDashboardController;
 
@@ -49,6 +50,8 @@ Route::name('admin.')->group(function () {
 
   Route::get('/detail-hunian', [MonitoringHunianController::class, 'detailHunian'])->name('detail.hunian');
 
+  Route::get('/kuesioner-hunian', [MonitoringHunianController::class, 'kuesionerHunian'])->name('kuesioner.hunian');
+
   // clarification route
   Route::get('/klarifikasi', [ClarificationController::class, 'index'])->name('clarification');
 
@@ -56,6 +59,8 @@ Route::name('admin.')->group(function () {
   Route::get('/penerima-manfaat', [PenerimaManfaatController::class, 'index'])->name('penerima.manfaat');
 
   Route::get('/profile-penerima-manfaat', [PenerimaManfaatController::class, 'profile'])->name('profile.penerima.manfaat');
+
+  Route::get('/roles', [RoleController::class, 'index'])->name('roles');
 }); // End Route Admin
 
 

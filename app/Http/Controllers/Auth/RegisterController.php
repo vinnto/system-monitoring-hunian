@@ -87,4 +87,14 @@ class RegisterController extends Controller
     {
         return view('auth.register');
     }
+
+    public function store(Request $request)
+    {
+        $credential = $request->validate([
+            'nik' => 'required|numeric|digits:16',
+            'email' => 'required|email|unique:users',
+            'mobile' => 'required|regex:/^08[0-9]{8,11}$/',
+            'password' => 'required'
+        ]);
+    }
 }

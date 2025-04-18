@@ -461,4 +461,4 @@ unset($__errorArgs, $__bag); ?>" name="password"
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views\layouts\horizontal.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views/layouts/horizontal.blade.php ENDPATH**/ ?>

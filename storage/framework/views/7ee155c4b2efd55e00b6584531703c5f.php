@@ -35,10 +35,12 @@
 
                 <li>
                     <a href="<?php echo e(route('admin.penerima.manfaat')); ?>">
-                        <i class="bx bx-user-check"></i>
+                        <i class="bx bxs-user"></i>
                         <span key="t-jobs">Penerima Manfaat</span>
                     </a>
                 </li>
+
+                
 
                 
 

@@ -79,8 +79,12 @@
                                                     <td>Jakarta Pusat</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Status Ketaatan</th>
+                                                    <th scope="row">Status Ketaatan:</th>
                                                     <td><span class="badge bg-warning">Terindikasi</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Keterangan:</th>
+                                                    <td><span class="badge bg-danger">Meteran Air Berkurang</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -118,8 +122,9 @@
                                     <td>20 Oct, 2019</td>
                                     <td><span class="badge bg-warning">Terindikasi</span></td>
                                     <td>
-                                        <a href="#" class="btn btn-sm btn-soft-primary"><i
-                                                class="bx bx-printer font-size-20"></i></a>
+                                        <a href="{{ route('admin.kuesioner.hunian') }}"
+                                            class="btn btn-sm btn-soft-success me-2" title="Kuesionser Hunian"><i
+                                                class="mdi mdi-eye-outline font-size-20"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -131,7 +136,6 @@
     </div>
 
     <!-- end row -->
-
 @endsection
 @section('script')
     <!-- apexcharts -->

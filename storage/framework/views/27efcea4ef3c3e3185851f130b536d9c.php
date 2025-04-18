@@ -1,17 +1,13 @@
 <?php $__env->startSection('title'); ?>
-    <?php echo app('translator')->get('translation.Dashboards'); ?>
-
-    <?php echo app('translator')->get('translation.Apex_Charts'); ?>
-
-    <?php echo app('translator')->get('translation.Toast_UI_Charts'); ?>
+    
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('css'); ?>
-    <!-- tui charts Css -->
+    <!-- tui charts css -->
     <link href="<?php echo e(URL::asset('build/libs/tui-chart/tui-chart.min.css')); ?>" rel="stylesheet" type="text/css" />
 
     
-    <link rel="stylesheet" href="<?php echo e(asset('css/dashboard/style.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('css/dashboard/admin-dashboard.css')); ?>">
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
@@ -23,27 +19,6 @@
             Dashboard
         <?php $__env->endSlot(); ?>
     <?php echo $__env->renderComponent(); ?>
-
-
-    <style>
-        .chart-container {
-            width: 100%;
-            height: 300px;
-        }
-
-        @media (max-width: 768px) {
-            .chart-container {
-                height: 250px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .chart-container {
-                height: 200px;
-            }
-        }
-    </style>
-
 
     
     <div class="row">
@@ -202,11 +177,10 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h4 class="card-title mb-3">Status Monitoring</h4>
-                    <div id="pie-chart-1" class="chart-container" data-colors='["#28a745", "#dc3545"]'></div>
+                    <div id="pie-chart-1" class="chart-container" data-colors='["#34c38f", "#f46a6a"]'></div>
                 </div>
             </div>
         </div>
-
         <!-- Perkembangan Ketaatan -->
         <div class="col-lg-4">
             <div class="card">
@@ -218,7 +192,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Hasil Penilaian Ketaatan -->
         <div class="col-lg-4">
             <div class="card">
@@ -235,35 +208,32 @@
     </div>
 
     <div class="row">
-        <div class="row">
-
-            <!-- Status Pemanggilan -->
-            <div class="col-12 col-sm-6 col-xl-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h4 class="card-title mb-3">Status Pemanggilan</h4>
-                        <div id="pie-chart-2" class="chart-container" data-colors='["#28a745","#ffc107", "#dc3545"]'>
-                        </div>
+        <!-- Status Pemanggilan -->
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Status Pemanggilan</h4>
+                    <div id="pie-chart-2" class="chart-container" data-colors='["#34c38f","#f1b44c", "#f46a6a"]'>
                     </div>
                 </div>
             </div>
-            <!-- Alasan Tidak Menghuni -->
-            <div class="col-12 col-sm-6 col-xl-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h4 class="card-title mb-3">Alasan Tidak Menghuni</h4>
-                        <div id="pie-chart-3" class="chart-container"
-                            data-colors='["#28a745","#0d6efd", "#ffc107", "#6c757d"]'></div>
-                    </div>
+        </div>
+        <!-- Alasan Tidak Menghuni -->
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Alasan Tidak Menghuni</h4>
+                    <div id="pie-chart-3" class="chart-container"
+                        data-colors='["#34c38f","#556ee6", "#f1b44c", "#6c757d"]'></div>
                 </div>
             </div>
-            <!-- Tempat Tinggal Saat Ini -->
-            <div class="col-12 col-sm-6 col-xl-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h4 class="card-title mb-3">Tempat Tinggal Saat Ini</h4>
-                        <div id="pie-chart-4" class="chart-container" data-colors='["#28a745","#0d6efd", "#ffc107"]'>
-                        </div>
+        </div>
+        <!-- Tempat Tinggal Saat Ini -->
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Tempat Tinggal Saat Ini</h4>
+                    <div id="pie-chart-4" class="chart-container" data-colors='["#34c38f","#556ee6", "#f1b44c"]'>
                     </div>
                 </div>
             </div>

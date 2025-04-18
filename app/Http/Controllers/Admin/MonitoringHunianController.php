@@ -16,4 +16,9 @@ class MonitoringHunianController extends Controller
     {
         return view('pages.admin.detail-hunian');
     }
+
+    public function kuesionerHunian()
+    {
+        return view('pages.admin.kuesioner-hunian');
+    }
 }

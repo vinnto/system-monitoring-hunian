@@ -4,6 +4,10 @@
     @lang('translation.Horizontal')
 @endsection
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/dashboard/user-dashboard.css') }}">
+@endsection
+
 @section('body')
 
     <body data-topbar="dark" data-layout="horizontal">
@@ -19,6 +23,7 @@
             @endslot
         @endcomponent
 
+        {{-- User Dashboard --}}
         <div class="row mb-3">
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
@@ -51,78 +56,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- CSS yang diperlukan untuk mengatur ukuran gambar -->
-        <style>
-            /* Wrapper untuk gambar carousel */
-            .carousel-image-wrapper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                max-height: 500px;
-                /* Tinggi maksimum container */
-                overflow: hidden;
-                background-color: #f8f9fa;
-                /* Warna latar belakang */
-            }
-
-            /* Style untuk gambar di dalam carousel */
-            .carousel-image-wrapper img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: contain;
-                /* Menjaga aspek rasio asli tanpa memotong */
-                margin: 0 auto;
-                /* Posisi center */
-            }
-
-            /* Pastikan carousel responsif */
-            #carouselExampleCaptions {
-                width: 100%;
-                margin: 0 auto;
-            }
-
-            /* Atur indikator agar lebih terlihat */
-            .carousel-indicators {
-                bottom: 0;
-            }
-
-            /* Atur tombol kontrol agar lebih terlihat */
-            .carousel-control-prev,
-            .carousel-control-next {
-                width: 5%;
-                opacity: 0.8;
-            }
-
-            /* Tambahkan background pada tombol kontrol */
-            .carousel-control-prev-icon,
-            .carousel-control-next-icon {
-                background-color: rgba(0, 0, 0, 0.3);
-                border-radius: 50%;
-                padding: 10px;
-            }
-
-            /* Gaya untuk gambar dengan sudut melengkung */
-            .carousel-image-wrapper img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: contain;
-                /* Menjaga aspek rasio asli tanpa memotong */
-                margin: 0 auto;
-                /* Posisi center */
-                border-radius: 15px;
-                /* Sudut melengkung pada gambar */
-            }
-
-            /* Optional: Tambahkan bayangan lembut untuk efek yang lebih baik */
-            .border {
-                border-radius: 15px;
-                /* Sudut melengkung pada border */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                /* Bayangan lembut */
-            }
-        </style>
 
         <div class="row">
             <div class="col-lg-12">

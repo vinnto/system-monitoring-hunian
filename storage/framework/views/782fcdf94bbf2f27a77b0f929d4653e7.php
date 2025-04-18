@@ -1,17 +1,15 @@
-@extends('layouts.master')
-
-@section('title')
-    @lang('translation.Profile')
-@endsection
-@section('content')
-    @component('components.breadcrumb')
-        @slot('li_1')
+<?php $__env->startSection('title'); ?>
+    <?php echo app('translator')->get('translation.Profile'); ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+        <?php $__env->slot('li_1'); ?>
             Contacts
-        @endslot
-        @slot('title')
+        <?php $__env->endSlot(); ?>
+        <?php $__env->slot('title'); ?>
             Profile
-        @endslot
-    @endcomponent
+        <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
 
     <div class="row">
         <!-- Profil dan Data Penghuni -->
@@ -31,7 +29,7 @@
                                             </div>
                                         </div>
                                         <div class="col-5 align-self-end">
-                                            <img src="{{ URL::asset('build/images/profile-img.png') }}" alt=""
+                                            <img src="<?php echo e(URL::asset('build/images/profile-img.png')); ?>" alt=""
                                                 class="img-fluid">
                                         </div>
                                     </div>
@@ -40,14 +38,14 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="avatar-md profile-user-wid mb-5">
-                                                <img src="{{ isset(Auth::user()->avatar) ? asset(Auth::user()->avatar) : asset('build/images/users/avatar-1.jpg') }}"
+                                                <img src="<?php echo e(isset(Auth::user()->avatar) ? asset(Auth::user()->avatar) : asset('build/images/users/avatar-1.jpg')); ?>"
                                                     alt="" class="img-thumbnail rounded-circle">
                                             </div>
                                             <h5 class="font-size-15 text-truncate">Benny Brood</h5>
                                             <span class="badge bg-success">PM Aktif</span>
                                         </div>
 
-                                        {{-- edit status pm --}}
+                                        
                                         <div class="col-sm-7">
                                             <div class="pt-4">
                                                 <div class="mt-4">
@@ -617,13 +615,13 @@
         <!-- end modal-dialog -->
     </div>
     <!-- end Lihat Hasil Klarfikasi -->
-@endsection
-@section('script')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
     <!-- apexcharts -->
-    <script src="{{ URL::asset('build/libs/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/libs/apexcharts/apexcharts.min.js')); ?>"></script>
 
     <!-- profile init -->
-    <script src="{{ URL::asset('build/js/pages/profile.init.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/js/pages/profile.init.js')); ?>"></script>
 
     <script>
         $('#update-profile').on('submit', function(event) {
@@ -635,7 +633,7 @@
             $('#dobError').text('');
             $('#avatarError').text('');
             $.ajax({
-                url: "{{ url('update-profile') }}" + "/" + Id,
+                url: "<?php echo e(url('update-profile')); ?>" + "/" + Id,
                 type: "POST",
                 data: formData,
                 contentType: false,
@@ -662,4 +660,6 @@
             });
         });
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views/pages/admin/profile-penerima-manfaat.blade.php ENDPATH**/ ?>
