@@ -1424,7 +1424,6 @@ $(window).resize(function () {
 });
 
 // Pie charts
-
 document.addEventListener("DOMContentLoaded", function () {
     function createChartData(title, dataArray) {
         return {
@@ -1461,15 +1460,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     suffix: "%",
                 },
                 series: {
+                    showLabel: true,
                     label: {
                         fontSize: "12px",
-                    },
-                    formatter: function (value, chartType, data) {
-                        var maxLength = 15;
-                        if (data.name.length > maxLength) {
-                            return data.name.substring(0, maxLength) + "...";
-                        }
-                        return data.name;
+                        formatter: function (value, chartType, data) {
+                            return `${data.name} (${value.toFixed(2)}%)`;
+                            // return `${data.name} (${Math.round(value)}%)`;
+                        },
                     },
                 },
             };
@@ -1507,12 +1504,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var chart1Data = createChartData("2025 Semester 1", [
-        { name: "Sudah", data: 46.02 },
+        { name: "Sudah", data: 80.02 },
         { name: "Belum", data: 20.47 },
     ]);
 
     var chart2Data = createChartData("2025 Semester 2", [
-        { name: "Undangan Klarifikasi", data: 52.35 },
+        { name: "Klarifikasi", data: 52.35 },
         { name: "Teguran 1", data: 12.42 },
         { name: "Teguran 2", data: 8.75 },
     ]);
@@ -1522,6 +1519,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Dinas Keluar Kota/Negeri", data: 23.68 },
         { name: "Peningkatan Ekonomi", data: 14.35 },
         { name: "Jumlah Anggota Keluarga", data: 11.85 },
+        { name: "Lainnya", data: 11.85 },
     ]);
 
     var chart4Data = createChartData("2026 Semester 2", [
@@ -1535,7 +1533,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var pieChart3 = renderPieChart("pie-chart-3", chart3Data);
     var pieChart4 = renderPieChart("pie-chart-4", chart4Data);
 
-    $(window).resize(function () {
+    window.addEventListener("resize", function () {
         [pieChart1, pieChart2, pieChart3, pieChart4].forEach((chart, index) => {
             if (chart) {
                 const containerId = `pie-chart-${index + 1}`;

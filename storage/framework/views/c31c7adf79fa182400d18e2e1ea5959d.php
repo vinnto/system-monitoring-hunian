@@ -45,9 +45,17 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label col-lg-2">Upload Foto Diri PM</label>
                             <div class="col-lg-4">
-                                <input type="file" name="foto_diri" class="form-control" accept="image/*">
+                                <!-- Tombol custom untuk membuka kamera -->
+                                <label for="fotoDiriInput" class="btn btn-primary">
+                                    📷 Ambil Foto
+                                </label>
+
+                                <!-- Input tersembunyi yang akan membuka kamera -->
+                                <input type="file" id="fotoDiriInput" name="foto_diri" accept="image/*"
+                                    capture="environment" style="display: none;" class="form-control">
                             </div>
                         </div>
+
 
                         <div class="form-group row mb-4">
                             <label class="col-form-label col-lg-2">Upload Foto Meteran Air</label>

@@ -109,10 +109,10 @@
                                     <td>Senin, 17 Maret 2025</td>
                                     <td>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#uploadHasilKlarifikasia"
-                                            class="btn btn-sm btn-soft-warning me-2" title="Edit Jadwal Klarifikasi"><i
+                                            class="btn btn-sm btn-soft-warning me-2" title="Input hasil klarifikasi"><i
                                                 class="bx bx-edit-alt font-size-20"></i></a>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#jadwalKlarifikasi"
-                                            class="btn btn-sm btn-soft-primary me-2" title="Upload Hasil Klarifikasi"><i
+                                            class="btn btn-sm btn-soft-primary me-2" title="Input Jadwal Klarfikasi"><i
                                                 class="bx bx-calendar-event font-size-20"></i></a>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#statusKetaatan"
                                             class="btn btn-sm btn-soft-success" title="Edit Status Ketaatan"><i
@@ -172,16 +172,26 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="paystatus-input" class="form-label">Keterangan(Jika Menghuni
+                                    <label for="paystatus-input" class="form-label">Keterangan (Jika Menghuni
                                         Berkala)</label>
-                                    <select class="form-select" id="paystatus-input" required>
-                                        <option value="Chargeback">Pilih Keterangan</option>
-                                        <option value="Paid" selected>Pindah Lokasi Kerja</option>
-                                        <option value="Refund">Dinas/Pendidikan Luar Kota/Negeri</option>
-                                        <option value="Refund">Peningkatan Ekonomi</option>
-                                        <option value="Refund">Peningkatan Jumlah Anggota Keluarga</option>
+                                    <select class="form-select" id="paystatus-input" required
+                                        onchange="toggleOtherInput(this)">
+                                        <option value="">Pilih Keterangan</option>
+                                        <option value="Pindah Lokasi Kerja">Pindah Lokasi Kerja</option>
+                                        <option value="Dinas/Pendidikan Luar Kota/Negeri">Dinas/Pendidikan Luar Kota/Negeri
+                                        </option>
+                                        <option value="Peningkatan Ekonomi">Peningkatan Ekonomi</option>
+                                        <option value="Peningkatan Jumlah Anggota Keluarga">Peningkatan Jumlah Anggota
+                                            Keluarga</option>
+                                        <option value="Lainnya">Lainnya</option>
                                     </select>
                                 </div>
+
+                                <div class="mb-3 d-none" id="other-keterangan">
+                                    <label for="keterangan-lainnya" class="form-label">Tuliskan Keterangan Lainnya</label>
+                                    <textarea class="form-control" id="keterangan-lainnya" rows="3" placeholder="Masukkan keterangan lainnya..."></textarea>
+                                </div>
+
                                 <div class="mb-3">
                                     <label for="paystatus-input" class="form-label">Tempat Tinggal Saat ini(Jika Menghuni
                                         Berkala)</label>
@@ -382,4 +392,15 @@
 
     <!-- job-list init -->
     <script src="{{ URL::asset('build/js/pages/job-list.init.js') }}"></script>
+
+    <script>
+        function toggleOtherInput(select) {
+            const otherInput = document.getElementById('other-keterangan');
+            if (select.value === 'Lainnya') {
+                otherInput.classList.remove('d-none');
+            } else {
+                otherInput.classList.add('d-none');
+            }
+        }
+    </script>
 @endsection

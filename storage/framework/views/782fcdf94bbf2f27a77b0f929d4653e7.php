@@ -193,7 +193,7 @@
                                     <th scope="col">Status Monitoring</th>
                                     <th scope="col">Tanggal Monitoring</th>
                                     <th scope="col">Status Ketaatan</th>
-                                    <th scope="col">Lihat Kuesioner</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -204,30 +204,8 @@
                                     <td>20 Oct, 2019</td>
                                     <td><span class="badge bg-warning">Terindikasi</span></td>
                                     <td>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#lihatKuesioner"
-                                            class="btn btn-sm btn-soft-success"><i
-                                                class="mdi mdi-eye-outline font-size-15"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Semester 2 - 2024</td>
-                                    <td>Sudah</td>
-                                    <td>20 Oct, 2019</td>
-                                    <td><span class="badge bg-danger">Tidak Taat</span></td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-soft-primary"><i
-                                                class="mdi mdi-eye-outline font-size-15"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Semester 1 - 2024</td>
-                                    <td>Sudah</td>
-                                    <td>20 Oct, 2019</td>
-                                    <td><span class="badge bg-success">Taat</span></td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-soft-primary"><i
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#lihatHasilKlarifikasi"
+                                            class="btn btn-sm btn-soft-success" title="Lihat Hasil Kuesioner"><i
                                                 class="mdi mdi-eye-outline font-size-15"></i></a>
                                     </td>
                                 </tr>
@@ -252,7 +230,7 @@
                                     <th scope="col">Jadwal Klarifikasi</th>
                                     <th scope="col">Status Klarifikasi</th>
                                     <th scope="col">Tanggal Kehadiran</th>
-                                    <th scope="col">Lihat Hasil Klarifikasi</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -263,8 +241,8 @@
                                     <td>Teguran 1</td>
                                     <td>Rabu, 09 Oktober 2025</td>
                                     <td>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#lihatHasilKlarifikasi"
-                                            class="btn btn-sm btn-soft-success"><i
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#lihatKuesioner"
+                                            class="btn btn-sm btn-soft-success" title="Lihat Hasil Klarifikasi"><i
                                                 class="mdi mdi-eye-outline font-size-15"></i></a>
                                     </td>
                                 </tr>
@@ -328,7 +306,7 @@
     </div>
     <!-- end Edit status PM -->
 
-    <!-- Lihat Kuesioner -->
+    <!-- Lihat Hasil Klarifikasi -->
     <div class="modal fade" id="lihatKuesioner" tabindex="-1" aria-labelledby="lihatKuesionerLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -373,7 +351,7 @@
                                 <div class="mb-3">
                                     <div class="col-md-7">
                                         <div class="mt-4 mt-md-0">
-                                            <label for="upload">Upload Berita Pernyataan (pdf)</label>
+                                            <label for="upload">Upload Surat Pernyataan (pdf)</label>
                                             <input class="form-control" type="file">
                                         </div>
                                     </div>
@@ -396,9 +374,9 @@
         </div>
         <!-- end modal-dialog -->
     </div>
-    <!-- end Lihat Kuesioner -->
+    <!-- end Lihat Hasil Klarifikasi -->
 
-    <!-- Lihat Hasil Klarfikasi -->
+    <!-- Lihat Lihat Kuesioner -->
     <div class="modal fade" id="lihatHasilKlarifikasi" tabindex="-1" aria-labelledby="lihatHasilKlarifikasiLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -431,7 +409,8 @@
                                             <div class="row mb-3">
                                                 <div class="col-md-12">
                                                     <label class="form-label">Nama Penerima Manfaat</label>
-                                                    <input type="text" class="form-control" value="Benny Brood" readonly>
+                                                    <input type="text" class="form-control" value="Benny Brood"
+                                                        readonly>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
@@ -614,7 +593,7 @@
         </div>
         <!-- end modal-dialog -->
     </div>
-    <!-- end Lihat Hasil Klarfikasi -->
+    <!-- end Lihat Kuesioner -->
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('script'); ?>
     <!-- apexcharts -->

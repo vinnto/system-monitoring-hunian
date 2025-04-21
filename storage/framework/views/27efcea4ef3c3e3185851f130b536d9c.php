@@ -26,143 +26,32 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row mb-3 align-items-center">
-                        <div class="col-md-8 col-9">
+                        <div class="col-md-3 col-3">
                             <select class="form-select" id="idType" aria-label="Default select example">
-                                <option value="all">Periode</option>
-                                <option value="Full Time">2025 Semester 1</option>
-                                <option value="Part Time">2025 Semester 2</option>
+                                <option value="all">Choose the year</option>
+                                <option value="Full Time">2025</option>
+                                <option value="Part Time">2026</option>
                             </select>
                         </div>
-                        <div class="col-md-4 col-3 text-end">
+                        <div class="col-md-3 col-3">
+                            <select class="form-select" id="idType" aria-label="Default select example">
+                                <option value="all">Choose the semester</option>
+                                <option value="Full Time">Semester 1</option>
+                                <option value="Part Time">Semester 2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-3">
+                            <select class="form-select" id="idType" aria-label="Default select example">
+                                <option value="all">Choose the tower</option>
+                                <option value="Full Time">Samawa</option>
+                                <option value="Part Time">Swasana</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-3 text-end">
                             <button type="button" class="btn btn-soft-primary w-100 w-md-auto" onclick="filterData();">
                                 <span class="d-none d-md-inline">Filter</span> <i
                                     class="mdi mdi-filter-outline align-middle"></i>
                             </button>
-                        </div>
-                    </div>
-                    <div class="d-flex overflow-auto pb-3"
-                        style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
-                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">Total Penerima Manfaat</p>
-                                        <h4 class="mb-0">0000</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-center">
-                                        <div class="avatar-sm rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-user font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">Samawa Nuansa Pondok Kelapa</p>
-                                        <h4 class="mb-0">0000</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-center">
-                                        <div class="avatar-sm rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-buildings font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">Swasana Nuansa Pondok</p>
-                                        <h4 class="mb-0">0000</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-center">
-                                        <div class="avatar-sm rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-buildings font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">Kanaya Nuansa Cilangkap</p>
-                                        <h4 class="mb-0">0000</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-center">
-                                        <div class="avatar-sm rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-buildings font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">Bunaken Sentraland Cenkareng</p>
-                                        <h4 class="mb-0">0000</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-center">
-                                        <div class="avatar-sm rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-buildings font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">A4 Bandar Kemayoran</p>
-                                        <h4 class="mb-0">0000</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-center">
-                                        <div class="avatar-sm rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-buildings font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mini-stats-wid" style="min-width: 300px; scroll-snap-align: start;">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">A5 Bandar Kemayoran</p>
-                                        <h4 class="mb-0">0000</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-center">
-                                        <div class="avatar-sm rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-buildings font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -172,6 +61,10 @@
     <!-- end row -->
 
     <div class="row">
+        <h4 class="mb-3 text-success">
+            <i class="bx bx-bar-chart-alt-2 me-2"></i>
+            <span class="fw-semibold" style="font-size: 1.25rem;">Monitoring Hunian</span>
+        </h4>
         <!-- Status Monitoring -->
         <div class="col-12 col-sm-6 col-xl-4 mb-4">
             <div class="card h-100">
@@ -208,6 +101,10 @@
     </div>
 
     <div class="row">
+        <h4 class="mb-3 text-success d-flex align-items-center">
+            <i class="bx bx-message-square-detail me-2 fs-4"></i>
+            <span class="fw-semibold" style="font-size: 1.25rem;">Klarifikasi</span>
+        </h4>
         <!-- Status Pemanggilan -->
         <div class="col-12 col-sm-6 col-xl-4 mb-4">
             <div class="card h-100">
@@ -223,8 +120,8 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h4 class="card-title mb-3">Alasan Tidak Menghuni</h4>
-                    <div id="pie-chart-3" class="chart-container"
-                        data-colors='["#34c38f","#556ee6", "#f1b44c", "#6c757d"]'></div>
+                    <div id="pie-chart-3" class="chart-container" data-colors='["#34c38f","#556ee6", "#f1b44c", "#6c757d"]'>
+                    </div>
                 </div>
             </div>
         </div>
