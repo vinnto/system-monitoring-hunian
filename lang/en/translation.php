@@ -178,7 +178,7 @@ return [
   "Placeholders" => "Placeholders",
   "Toasts" => "Toasts",
   
-  "Jobs" => "Monitoring Hunian",
+  "Jobs" => "Jobs",
   "Job_List" => "Job List",
   "Job_Grid" => "Job Grid",
   "Apply_Job" => "Apply Job",

@@ -41,7 +41,7 @@
                     <div class="row g-3">
                         <div class="col-xxl-2 col-lg-4">
                             <select class="form-select" id="idType" aria-label="Default select example">
-                                <option value="all">Semua Lokasi</option>
+                                <option value="all">Pilih Lokasi</option>
                                 <option value="Full Time">Samawa Nuansa Pondok Kelapa</option>
                                 <option value="Part Time">Swasana Nuansa Pondok</option>
                                 <option value="Part Time">Kanaya Nuansa Cilangkap</option>
@@ -66,15 +66,16 @@
                         <div class="col-xxl-2 col-lg-4">
                             <select class="form-select" id="idType" aria-label="Default select example">
                                 <option value="all">Pilih No. Unit</option>
-                                <option value="Full Time">1</option>
-                                <option value="Part Time">2</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
                             </select>
                         </div>
                         <div class="col-xxl-2 col-lg-4">
                             <select class="form-select" id="idType" aria-label="Default select example">
-                                <option value="all">Periode</option>
-                                <option value="Full Time">2025 Semester 1</option>
-                                <option value="Part Time">2025 Semester 2</option>
+                                <option value="all">Jenis Monitoring</option>
+                                <option value="">Mandiri</option>
+                                <option value="">Surveyor</option>
+                                <option value="">Belum</option>
                             </select>
                         </div>
                         <div class="col-xxl-2 col-lg-4">
@@ -97,7 +98,7 @@
                                     <th scope="col">Tower</th>
                                     <th scope="col">Lantai</th>
                                     <th scope="col">No. Unit</th>
-                                    <th scope="col">Type</th>
+                                    <th scope="col">Jenis Monitoring</th>
                                     <th scope="col">Status Ketaatan</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -109,11 +110,11 @@
                                     <td>Samawa</td>
                                     <td>01</td>
                                     <td>02</td>
-                                    <td>36</td>
+                                    <td>Mandiri</td>
                                     <td><span class="badge bg-warning">Terindikasi</span></td>
                                     <td>
                                         <a href="<?php echo e(route('admin.detail.hunian')); ?>" class="btn btn-sm btn-soft-primary"
-                                            title="Detail Hunian"><i class="bx bx-user-pin font-size-20"></i></a>
+                                            title="Detail Hunian"><i class="bx bx-building-house font-size-20"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -154,6 +155,7 @@
         </div>
     </div>
 <?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('script'); ?>
     <!-- bootstrap-datepicker js -->
     <script src="<?php echo e(URL::asset('build/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js')); ?>"></script>

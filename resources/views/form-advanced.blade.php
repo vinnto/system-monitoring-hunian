@@ -362,7 +362,6 @@
                                 <input type="text" class="form-control" data-date-container='#datepicker4'
                                     data-provide="datepicker" data-date-format="MM yyyy" data-date-min-view-mode="1">
                             </div>
-
                         </div>
 
                         <div class="mb-4">

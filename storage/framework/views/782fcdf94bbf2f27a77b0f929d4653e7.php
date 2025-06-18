@@ -376,7 +376,7 @@
     </div>
     <!-- end Lihat Hasil Klarifikasi -->
 
-    <!-- Lihat Lihat Kuesioner -->
+    <!-- Lihat Kuesioner -->
     <div class="modal fade" id="lihatHasilKlarifikasi" tabindex="-1" aria-labelledby="lihatHasilKlarifikasiLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

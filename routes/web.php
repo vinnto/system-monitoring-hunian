@@ -2,16 +2,26 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Auth\ForgotPasswordController;
-use App\Http\Controllers\Admin\ClarificationController;
-use App\Http\Controllers\Admin\PenerimaManfaatController;
-use App\Http\Controllers\Admin\MonitoringHunianController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Admin\TowerController;
+use App\Http\Controllers\Admin\LantaiController;
+use App\Http\Controllers\Admin\LokasiController;
+use App\Http\Controllers\Admin\NoUnitController;
+use App\Http\Controllers\Admin\PeriodeController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Admin\LuasTipeController;
+use App\Http\Controllers\Admin\PekerjaanController;
+use App\Http\Controllers\Admin\KeteranganController;
+use App\Http\Controllers\User\UserDashboardController;
+use App\Http\Controllers\Admin\ClarificationController;
+use App\Http\Controllers\Admin\TempatTinggalController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\PenerimaManfaatController;
 use App\Http\Controllers\User\MonitoringMandiriController;
-use App\Http\Controllers\User\DashboardController as UserDashboardController;
+use App\Http\Controllers\Admin\MonitoringHunianController;
+use App\Http\Controllers\Admin\StatusPenerimaManfaatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,11 +49,29 @@ Route::name('auth.')->group(function () {
   Route::get('/forgot-password', [ForgotPasswordController::class, 'index'])->name('forgot.password');
 });
 
+
+// Route::resource('lokasi', LokasiController::class)->names([
+//       'index' => 'lokasi.index',
+//       'store' => 'lokasi.store',
+//       'update' => 'lokasi.update',
+//       'destroy' => 'lokasi.destroy'
+//   ]);
+
+Route::resource('lokasi', LokasiController::class);
+Route::resource('tower', TowerController::class);
+Route::resource('lantai', LantaiController::class);
+Route::resource('no-unit', NoUnitController::class);
+Route::resource('luas-tipe', LuasTipeController::class);
+Route::resource('periode', PeriodeController::class);
+Route::resource('status-pm', StatusPenerimaManfaatController::class);
+Route::resource('pekerjaan', PekerjaanController::class);
+Route::resource('keterangan', KeteranganController::class);
+Route::resource('tempat-tinggal', TempatTinggalController::class);
+
 // Route Admin
 Route::name('admin.')->group(function () {
-
   // dashboard route
-  Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+  Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
   // monitoring-hunian route
   Route::get('/monitoring-hunian', [MonitoringHunianController::class, 'index'])->name('monitoring.hunian');

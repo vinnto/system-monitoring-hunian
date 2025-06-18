@@ -6,10 +6,10 @@
 @section('content')
     @component('components.breadcrumb')
         @slot('li_1')
-            Contacts
+            Monitoring Hunian
         @endslot
         @slot('title')
-            Profile
+            Detail Hunian
         @endslot
     @endcomponent
 
@@ -22,34 +22,22 @@
                         <!-- Profil -->
                         <div class="col-md-4">
                             <div class="card overflow-hidden">
-                                <div class="bg-primary-subtle">
-                                    <div class="row">
-                                        <div class="col-10">
-                                            <div class="text-primary p-3">
-                                                <h6 class="text-primary">Tower Samawa Lt. 01 No. 02</h6>
-                                                <p>Nuansa Pondok Kelapa</p>
+                                <div class="bg-light">
+                                    <div class="text-center p-4">
+                                        <h6 class="font-weight-bold">UNIT SAMAWA 01-02</h6>
+                                        <p>Nuansa Pondok Kelapa</p>
+                                        <div class="mb-3">
+                                            <div
+                                                style="width: 290px; height: 290px; border-radius: 50%; background-color: #eaeaea; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                                <img src="{{ asset('images/avatar-1.jpg') }}" alt="Image Description"
+                                                    style="width: 290px; height: 290px; border-radius: 50%;">
                                             </div>
-                                        </div>
-                                        <div class="col-5 align-self-end">
-                                            <img src="{{ URL::asset('build/images/profile-img.png') }}" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="avatar-md profile-user-wid mb-5">
-                                                <img src="{{ isset(Auth::user()->avatar) ? asset(Auth::user()->avatar) : asset('build/images/users/avatar-1.jpg') }}"
-                                                    alt="" class="img-thumbnail rounded-circle">
-                                            </div>
-                                            <h5 class="font-size-15 text-truncate">Benny Brood</h5>
-                                            <p class="text-muted mb-0 text-truncate">Penerima Manfaat</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <!-- Data Penghuni -->
                         <div class="col-md-8">
                             <div class="card">
@@ -108,18 +96,57 @@
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Periode Monitoring</th>
-                                    <th scope="col">Status Monitoring</th>
+                                    <th scope="col">Nama Penghuni</th>
+                                    <th scope="col">Jenis Monitoring</th>
                                     <th scope="col">Tanggal Monitoring</th>
                                     <th scope="col">Status Ketaatan</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Lihat Kuesioner</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Semester 1 - 2025</td>
-                                    <td>Belum</td>
+                                    <td>Ganjil - 2025</td>
+                                    <td>Benny Brood</td>
+                                    <td>Surveyor</td>
                                     <td>20 Oct, 2019</td>
+                                    <td><span class="badge bg-warning">Terindikasi</span></td>
+                                    <td>
+                                        <a href="{{ route('admin.kuesioner.hunian') }}"
+                                            class="btn btn-sm btn-soft-success me-2" title="Kuesionser Hunian"><i
+                                                class="mdi mdi-eye-outline font-size-20"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabel Histori Penghunian -->
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Histori Penghunian</h4>
+                    <div class="table-responsive">
+                        <table class="table table-nowrap table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Nama Penghuni</th>
+                                    <th scope="col">Tanggal Akad</th>
+                                    <th scope="col">Tanggal Berhenti Menghuni</th>
+                                    <th scope="col">Status PM</th>
+                                    <th scope="col">Lihat Profile</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Benny Brood</td>
+                                    <td>20 Oct, 2019</td>
+                                    <td>20 Desc, 2029</td>
                                     <td><span class="badge bg-warning">Terindikasi</span></td>
                                     <td>
                                         <a href="{{ route('admin.kuesioner.hunian') }}"

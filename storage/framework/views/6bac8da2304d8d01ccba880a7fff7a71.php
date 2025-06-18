@@ -154,6 +154,7 @@
         </div>
     </div>
 <?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('script'); ?>
     <!-- bootstrap-datepicker js -->
     <script src="<?php echo e(URL::asset('build/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js')); ?>"></script>

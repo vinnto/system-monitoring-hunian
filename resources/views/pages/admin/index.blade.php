@@ -30,6 +30,13 @@
                     <div class="row mb-3 align-items-center">
                         <div class="col-md-3 col-3">
                             <select class="form-select" id="idType" aria-label="Default select example">
+                                <option value="all">Choose the tower</option>
+                                <option value="Full Time">Samawa</option>
+                                <option value="Part Time">Swasana</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-3">
+                            <select class="form-select" id="idType" aria-label="Default select example">
                                 <option value="all">Choose the year</option>
                                 <option value="Full Time">2025</option>
                                 <option value="Part Time">2026</option>
@@ -40,13 +47,6 @@
                                 <option value="all">Choose the semester</option>
                                 <option value="Full Time">Semester 1</option>
                                 <option value="Part Time">Semester 2</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3 col-3">
-                            <select class="form-select" id="idType" aria-label="Default select example">
-                                <option value="all">Choose the tower</option>
-                                <option value="Full Time">Samawa</option>
-                                <option value="Part Time">Swasana</option>
                             </select>
                         </div>
                         <div class="col-md-3 col-3 text-end">
@@ -109,20 +109,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">Kanaya Nuansa Cilangkap</p>
-                                        <h4 class="mb-0">0000</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-center">
-                                        <div class="avatar-sm rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-buildings font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
+
+                        <div class="card border-0 shadow-sm"
+                            style="border-radius: 15px; overflow: hidden; background-color: #e6f4f1; min-width: 300px;">
+                            <div class="position-relative">
+                                <img src="{{ asset('images/gedung-kanaya.png') }}" alt="Gedung" class="w-100"
+                                    style="height: 180px; object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 p-3">
+                                    <h4 class="fw-bold mb-0" style="color: #2c3e50;">Kanaya</h4>
+                                    <small class="text-muted">Nuansa Cilangkap</small>
+                                </div>
+                                <div class="position-absolute top-50 start-50 translate-middle">
+                                    <h1 class="fw-bold"
+                                        style="font-size: 60px; color: black; -webkit-text-stroke: 1px white;">0000</h1>
                                 </div>
                             </div>
                         </div>
@@ -145,23 +144,22 @@
                             </div>
                         </div>
 
-                        <div class="card mini-stats-wid me-3" style="min-width: 300px; scroll-snap-align: start;">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted fw-medium">Tower A4 Bandar Kemayoran</p>
-                                        <h4 class="mb-0">0000</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-center">
-                                        <div class="avatar-sm rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-buildings font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
+                        <div class="card border-0 shadow-sm"
+                            style="border-radius: 15px; overflow: hidden; background-color: #e6f4f1; min-width: 300px;">
+                            <div class="position-relative">
+                                <img src="{{ asset('images/gedung-bandar-kemayoran.png') }}" alt="Gedung"
+                                    class="w-100" style="height: 180px; object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 p-3">
+                                    <h4 class="fw-bold mb-0" style="color: #2c3e50;">Tower A4</h4>
+                                    <small class="text-muted">Bandar Kemayoran</small>
+                                </div>
+                                <div class="position-absolute top-50 start-50 translate-middle">
+                                    <h1 class="fw-bold"
+                                        style="font-size: 60px; color: black; -webkit-text-stroke: 1px white;">0000</h1>
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="card mini-stats-wid" style="min-width: 300px; scroll-snap-align: start;">
                             <div class="card-body">

@@ -108,15 +108,18 @@
                                     <td>Teguran 1</td>
                                     <td>Senin, 17 Maret 2025</td>
                                     <td>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#uploadHasilKlarifikasia"
-                                            class="btn btn-sm btn-soft-warning me-2" title="Input hasil klarifikasi"><i
-                                                class="bx bx-edit-alt font-size-20"></i></a>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#jadwalKlarifikasi"
-                                            class="btn btn-sm btn-soft-primary me-2" title="Input Jadwal Klarfikasi"><i
-                                                class="bx bx-calendar-event font-size-20"></i></a>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#statusKetaatan"
-                                            class="btn btn-sm btn-soft-success" title="Edit Status Ketaatan"><i
-                                                class="bx bx-home-circle font-size-20"></i></a>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <a href="#" data-bs-toggle="modal"
+                                                data-bs-target="#uploadHasilKlarifikasia"
+                                                class="btn btn-sm btn-soft-warning me-2" title="Input hasil klarifikasi"><i
+                                                    class="bx bx-edit-alt font-size-20"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#jadwalKlarifikasi"
+                                                class="btn btn-sm btn-soft-primary me-2" title="Input Jadwal Klarfikasi"><i
+                                                    class="bx bx-calendar-event font-size-20"></i></a>
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#statusKetaatan"
+                                                class="btn btn-sm btn-soft-success" title="Edit Status Ketaatan"><i
+                                                    class="bx bx-home-circle font-size-20"></i></a>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
