@@ -12,7 +12,6 @@ return new class extends Migration
      */
     public function up(): void
     {
-        DB::statement("CREATE TYPE intensitas_menghuni_enum AS ENUM('aktif', 'berkala', 'pelanggaran')");
 
         Schema::create('hasil_pemanggilans', function (Blueprint $table) {
             $table->id();

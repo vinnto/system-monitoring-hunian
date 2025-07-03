@@ -2,12 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Lokasi extends Model
 {
     use HasFactory;
 
     protected $fillable = ['lokasi'];
+
+    public function hunians()
+    {
+        return $this->hasMany(Hunian::class);
+    }
 }

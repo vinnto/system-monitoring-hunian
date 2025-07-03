@@ -113,13 +113,8 @@
                     <?php echo csrf_field(); ?>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="status_pm">Status Penerima Manfaat</label>
-                            <select name="status_pm" class="form-control" required>
-                                <option value="">Pilih Status PM</option>
-                                <option value="restru">Restru</option>
-                                <option value="buyback">Buyback</option>
-                                <option value="meninggal">Meninggal</option>
-                            </select>
+                            <label for="status_pm" class="form-label">Status Penerima Manfaat</label>
+                            <input type="text" class="form-control" name="status_pm" required>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -145,15 +140,8 @@
                     <?php echo method_field('PUT'); ?>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="status_pm">Status PM</label>
-                            <select name="status_pm" id="edit_status_pm" class="form-control" required>
-                                <option value="restru">
-                                    Restru</option>
-                                <option value="buyback">Buyback
-                                </option>
-                                <option value="meninggal">
-                                    Meninggal</option>
-                            </select>
+                            <label for="edit_status_pm" class="form-label">Status Penerima Manfaat</label>
+                            <input type="text" class="form-control" id="edit_status_pm" name="status_pm" required>
                         </div>
                     </div>
                     <div class="modal-footer">

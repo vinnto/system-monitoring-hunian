@@ -17,7 +17,7 @@
                 </li>
 
                 {{-- sidebar layouts --}}
-                {{-- <li>
+                <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <span class="badge rounded-pill bg-danger float-end" key="t-hot">@lang('translation.hot')</span>
                         <i class="bx bx-layout"></i>
@@ -55,7 +55,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li> --}}
+                </li>
 
                 <li>
                     <a href="{{ route('admin.monitoring.hunian') }}">
@@ -68,7 +68,7 @@
                 <li>
                     <a href="{{ route('admin.clarification') }}">
                         <i class="bx bx-calendar"></i>
-                        <span key="t-jobs">Klarifikasi</span>
+                        <span key="t-jobs">Pemanggilan</span>
                     </a>
                 </li>
 
@@ -80,11 +80,29 @@
                 </li>
 
                 <li>
+                    <a href="#">
+                        <i class="bx bx-bar-chart"></i>
+                        <span key="t-jobs">Statistik</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-data"></i>
                         <span key="t-email">Master Data</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="#" key="t-inbox">
+                                <i class="bx bx-slideshow"></i> Slides
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('hunian.index') }}" key="t-inbox">
+                                <i class="bx bx-home-alt"></i>Hunian
+                            </a>
+                        </li>
                         <li>
                             <a href="{{ route('lokasi.index') }}" key="t-inbox">
                                 <i class="bx bx-map"></i> Lokasi
@@ -133,6 +151,35 @@
                         <li>
                             <a href="{{ route('tempat-tinggal.index') }}" key="t-inbox">
                                 <i class="bx bx-home"></i> Tempat Tinggal
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-user-circle"></i>
+                        <span key="#">Operator Sistem</span>
+                    </a>
+
+
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li>
+                            <a href="#" key="t-inbox">
+                                <i class="bx bx-shield-quarter"></i> Admin
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" key="t-inbox">
+                                <i class="bx bx-user-check"></i> Penerima Manfaat
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" key="t-inbox">
+                                <i class="bx bx-user-pin"></i> Surveyor
                             </a>
                         </li>
 

@@ -9,6 +9,9 @@ class MonitoringMandiriController extends Controller
 {
     public function index()
     {
-        return view('pages.user.monitoring-mandiri');
+        
+        return view('pages.penerima_manfaat.monitoring-mandiri');
     }
+
+
 }

@@ -43,51 +43,20 @@
                     <div class="row g-3">
                         <div class="col-xxl-2 col-lg-4">
                             <select class="form-select" id="idType" aria-label="Default select example">
-                                <option value="all">Pilih Lokasi</option>
-                                <option value="Full Time">Samawa Nuansa Pondok Kelapa</option>
-                                <option value="Part Time">Swasana Nuansa Pondok</option>
-                                <option value="Part Time">Kanaya Nuansa Cilangkap</option>
-                                <option value="Part Time">Bunaken Sentraland Cenkareng</option>
+                                <option value="all">Pilih Tahun</option>
                             </select>
                         </div>
                         <div class="col-xxl-2 col-lg-6">
                             <select class="form-select" id="idStatus" aria-label="Default select example">
-                                <option value="all">Pilih Tower</option>
-                                <option value="Active">Samawa</option>
-                                <option value="New">Swasana</option>
-                                <option value="Close">Kanaya</option>
+                                <option value="">Pilih Semester</option>
+                                <option value="">Semester Ganjil</option>
+                                <option value="">Semester Genap</option>
                             </select>
                         </div>
-                        <div class="col-xxl-2 col-lg-4">
-                            <select class="form-select" id="idType" aria-label="Default select example">
-                                <option value="all">Pilih Lantai</option>
-                                <option value="Full Time">1</option>
-                                <option value="Part Time">2</option>
-                            </select>
-                        </div>
-                        <div class="col-xxl-2 col-lg-4">
-                            <select class="form-select" id="idType" aria-label="Default select example">
-                                <option value="all">Pilih No. Unit</option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                            </select>
-                        </div>
-                        <div class="col-xxl-2 col-lg-4">
-                            <select class="form-select" id="idType" aria-label="Default select example">
-                                <option value="all">Jenis Monitoring</option>
-                                <option value="">Mandiri</option>
-                                <option value="">Surveyor</option>
-                                <option value="">Belum</option>
-                            </select>
-                        </div>
-                        <div class="col-xxl-2 col-lg-4">
-                            <select class="form-select" id="idType" aria-label="Default select example">
-                                <option value="all">Status Ketaatan</option>
-                                <option value="Full Time">Aktif</option>
-                                <option value="Part Time">Buyback</option>
-                                <option value="Part Time">Meninggal</option>
-                            </select>
-                        </div>
+
+
+
+
                     </div>
                 </div>
                 <div class="card-body">

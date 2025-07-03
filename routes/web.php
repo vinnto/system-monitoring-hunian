@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\TowerController;
+use App\Http\Controllers\Admin\SlideController;
+use App\Http\Controllers\Admin\HunianController;
 use App\Http\Controllers\Admin\LantaiController;
 use App\Http\Controllers\Admin\LokasiController;
 use App\Http\Controllers\Admin\NoUnitController;
@@ -47,8 +49,8 @@ Route::name('auth.')->group(function () {
 
   // reset password
   Route::get('/forgot-password', [ForgotPasswordController::class, 'index'])->name('forgot.password');
-});
 
+});
 
 // Route::resource('lokasi', LokasiController::class)->names([
 //       'index' => 'lokasi.index',
@@ -57,19 +59,22 @@ Route::name('auth.')->group(function () {
 //       'destroy' => 'lokasi.destroy'
 //   ]);
 
-Route::resource('lokasi', LokasiController::class);
+Route::resource('slide', SlideController::class);
 Route::resource('tower', TowerController::class);
+Route::resource('hunian', HunianController::class);
+Route::resource('lokasi', LokasiController::class);
 Route::resource('lantai', LantaiController::class);
 Route::resource('no-unit', NoUnitController::class);
-Route::resource('luas-tipe', LuasTipeController::class);
 Route::resource('periode', PeriodeController::class);
-Route::resource('status-pm', StatusPenerimaManfaatController::class);
+Route::resource('luas-tipe', LuasTipeController::class);
 Route::resource('pekerjaan', PekerjaanController::class);
 Route::resource('keterangan', KeteranganController::class);
 Route::resource('tempat-tinggal', TempatTinggalController::class);
+Route::resource('status-pm', StatusPenerimaManfaatController::class);
 
 // Route Admin
 Route::name('admin.')->group(function () {
+  
   // dashboard route
   Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
@@ -78,7 +83,9 @@ Route::name('admin.')->group(function () {
 
   Route::get('/detail-hunian', [MonitoringHunianController::class, 'detailHunian'])->name('detail.hunian');
 
-  Route::get('/kuesioner-hunian', [MonitoringHunianController::class, 'kuesionerHunian'])->name('kuesioner.hunian');
+  Route::get('/admin-monitoring-mandiri', [MonitoringHunianController::class, 'kuesionerMandiri'])->name('kuesioner.mandiri');
+
+  // Route::get('/kuesioner-hunian', [MonitoringHunianController::class, 'kuesionerHunian'])->name('kuesioner.hunian');
 
   // clarification route
   Route::get('/klarifikasi', [ClarificationController::class, 'index'])->name('clarification');
@@ -99,7 +106,7 @@ Route::name('user.')->group(function () {
   Route::get('/user-dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
 
   // monitoring mandiri route
-  Route::get('/monitoring-mandiri', [MonitoringMandiriController::class, 'index'])->name('monitoring.mandiri');
+  Route::get('/user-monitoring-mandiri', [MonitoringMandiriController::class, 'index'])->name('monitoring.mandiri');
 
   // profile penerima manfaat
   Route::get('/profile-pm', [UserDashboardController::class, 'profilePenerimaManfaat'])->name('profile.penerima.manfaat');

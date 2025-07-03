@@ -18,10 +18,10 @@
 <?php $__env->startSection('content'); ?>
     <?php $__env->startComponent('components.breadcrumb'); ?>
         <?php $__env->slot('li_1'); ?>
-            Table Klarifikasi
+            Table Pemanggilan
         <?php $__env->endSlot(); ?>
         <?php $__env->slot('title'); ?>
-            Klarifikasi
+            Hasil Monitoring
         <?php $__env->endSlot(); ?>
     <?php echo $__env->renderComponent(); ?>
 

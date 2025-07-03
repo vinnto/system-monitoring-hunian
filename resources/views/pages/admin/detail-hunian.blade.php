@@ -24,8 +24,8 @@
                             <div class="card overflow-hidden">
                                 <div class="bg-light">
                                     <div class="text-center p-4">
-                                        <h6 class="font-weight-bold">UNIT SAMAWA 01-02</h6>
-                                        <p>Nuansa Pondok Kelapa</p>
+                                        <h4 class="font-weight-bold">UNIT SAMAWA 01-02</h4>
+                                        <h5>Nuansa Pondok Kelapa</h5>
                                         <div class="mb-3">
                                             <div
                                                 style="width: 290px; height: 290px; border-radius: 50%; background-color: #eaeaea; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
@@ -89,7 +89,7 @@
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-4">Riwayat Monitoring</h4>
+                    <h4 class="card-title mb-4">Riwayat Monitoring Penghuni Saat ini</h4>
                     <div class="table-responsive">
                         <table class="table table-nowrap table-hover mb-0">
                             <thead>
@@ -110,9 +110,35 @@
                                     <td>Benny Brood</td>
                                     <td>Surveyor</td>
                                     <td>20 Oct, 2019</td>
+                                    <td><span class="badge bg-success">Taat</span></td>
+                                    <td>
+                                        <a href="{{ route('admin.kuesioner.mandiri') }}"
+                                            class="btn btn-sm btn-soft-success me-2" title="Kuesionser Hunian"><i
+                                                class="mdi mdi-eye-outline font-size-20"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Genap - 2025</td>
+                                    <td>Benny Brood</td>
+                                    <td>Mandiri</td>
+                                    <td>20 Oct, 2019</td>
                                     <td><span class="badge bg-warning">Terindikasi</span></td>
                                     <td>
-                                        <a href="{{ route('admin.kuesioner.hunian') }}"
+                                        <a href="{{ route('admin.kuesioner.mandiri') }}"
+                                            class="btn btn-sm btn-soft-success me-2" title="Kuesionser Hunian"><i
+                                                class="mdi mdi-eye-outline font-size-20"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Ganjil - 2026</td>
+                                    <td>Benny Brood</td>
+                                    <td>Belum</td>
+                                    <td>20 Oct, 2019</td>
+                                    <td><span class="badge bg-danger">Tidak Taat</span></td>
+                                    <td>
+                                        <a href="{{ route('admin.kuesioner.mandiri') }}"
                                             class="btn btn-sm btn-soft-success me-2" title="Kuesionser Hunian"><i
                                                 class="mdi mdi-eye-outline font-size-20"></i></a>
                                     </td>
@@ -146,10 +172,34 @@
                                     <th scope="row">1</th>
                                     <td>Benny Brood</td>
                                     <td>20 Oct, 2019</td>
-                                    <td>20 Desc, 2029</td>
-                                    <td><span class="badge bg-warning">Terindikasi</span></td>
+                                    <td>20 Oct, 2020</td>
+                                    <td><span class="badge bg-success">Pemilik</span></td>
                                     <td>
-                                        <a href="{{ route('admin.kuesioner.hunian') }}"
+                                        <a href="{{ route('admin.kuesioner.mandiri') }}"
+                                            class="btn btn-sm btn-soft-success me-2" title="Kuesionser Hunian"><i
+                                                class="mdi mdi-eye-outline font-size-20"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Benny Brood</td>
+                                    <td>20 Oct, 2019</td>
+                                    <td>20 Oct, 2020</td>
+                                    <td><span class="badge bg-warning">Penyewa</span></td>
+                                    <td>
+                                        <a href="{{ route('admin.kuesioner.mandiri') }}"
+                                            class="btn btn-sm btn-soft-success me-2" title="Kuesionser Hunian"><i
+                                                class="mdi mdi-eye-outline font-size-20"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Benny Brood</td>
+                                    <td>20 Oct, 2019</td>
+                                    <td>20 Oct, 2020</td>
+                                    <td><span class="badge bg-danger">Meninggal</span></td>
+                                    <td>
+                                        <a href="{{ route('admin.kuesioner.mandiri') }}"
                                             class="btn btn-sm btn-soft-success me-2" title="Kuesionser Hunian"><i
                                                 class="mdi mdi-eye-outline font-size-20"></i></a>
                                     </td>

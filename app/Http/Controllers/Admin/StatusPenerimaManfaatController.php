@@ -19,7 +19,7 @@ class StatusPenerimaManfaatController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'status_pm' => 'required|in:restru,buyback,meninggal'
+            'status_pm' => 'required'
         ]);
 
         try {

@@ -10,4 +10,9 @@ class Lantai extends Model
     use HasFactory;
 
     protected $fillable = ['lantai'];
+
+    public function hunians()
+    {
+        return $this->hasMany(Hunian::class);
+    }
 }

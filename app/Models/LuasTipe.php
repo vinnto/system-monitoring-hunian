@@ -10,4 +10,9 @@ class LuasTipe extends Model
     use HasFactory;
 
     protected $fillable = ['luas_tipe'];
+
+    public function hunians()
+    {
+        return $this->hasMany(Hunian::class);
+    }
 }

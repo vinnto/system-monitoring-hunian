@@ -16,7 +16,7 @@ return new class extends Migration
         DB::statement("DROP TYPE IF EXISTS jenis_monitoring_enum");
         DB::statement("DROP TYPE IF EXISTS jenis_kendaraan_enum");
         DB::statement("CREATE TYPE jenis_monitoring_enum AS ENUM('mandiri', 'surveyor', 'belum')");
-        DB::statement("CREATE TYPE jenis_kendaraan_enum AS ENUM('roda2, roda4)");
+        DB::statement("CREATE TYPE jenis_kendaraan_enum AS ENUM('roda2, roda4')");
 
         Schema::create('monitoring_hunians', function (Blueprint $table) {
             $table->id();
@@ -35,9 +35,11 @@ return new class extends Migration
             $table->string('no_plat');
             $table->string('foto_depan_unit');
             $table->string('foto_meteran_air');
+            $table->string('nilai_ocr_air');
             $table->string('nilai_meteran_air');
             $table->date('tgl_upload_meteran_air');
             $table->string('foto_meteran_listrik');
+            $table->string('nilai_ocr_listrik');
             $table->string('nilai_meteran_listrik');
             $table->date('tgl_upload_meteran_listrik');
             $table->string('foto_surveyor');

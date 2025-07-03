@@ -1,23 +1,23 @@
-@extends('layouts.master-layouts')
 
-@section('title')
-    @lang('translation.Horizontal')
-@endsection
 
-@section('css')
+<?php $__env->startSection('title'); ?>
+    <?php echo app('translator')->get('translation.Horizontal'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
     <!-- datepicker css -->
-    <link href="{{ URL::asset('build/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
-@endsection
+    <link href="<?php echo e(URL::asset('build/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css')); ?>" rel="stylesheet">
+<?php $__env->stopSection(); ?>
 
-@section('content')
-    @component('components.breadcrumb')
-        @slot('li_1')
+<?php $__env->startSection('content'); ?>
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+        <?php $__env->slot('li_1'); ?>
             Hunian
-        @endslot
-        @slot('title')
+        <?php $__env->endSlot(); ?>
+        <?php $__env->slot('title'); ?>
             Monitoring Mandiri
-        @endslot
-    @endcomponent
+        <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
 
     <div class="row">
         <div class="col-lg-12">
@@ -27,7 +27,7 @@
                     <h6 class="mb-4">Periode: Semester 1 Tahun 2025</h6>
 
                     <form class="monitoring-form" method="post" enctype="multipart/form-data">
-                        @csrf
+                        <?php echo csrf_field(); ?>
                         <div class="form-group row mb-4">
                             <label for="nama_penerima" class="col-form-label col-lg-2">Nama Penerima Manfaat</label>
                             <div class="col-lg-10">
@@ -43,24 +43,29 @@
                         </div>
 
                         <div class="form-group row mb-4">
-                            <label class="col-form-label col-lg-2">Upload Foto Diri PM</label>
+                            <label class="col-form-label col-lg-2">Foto Penerima Manfaat</label>
                             <div class="col-lg-4">
-                                <!-- Tombol custom untuk membuka kamera -->
                                 <label for="fotoDiriInput" class="btn btn-primary">
                                     📷 Ambil Foto
                                 </label>
-
-                                <!-- Input tersembunyi yang akan membuka kamera -->
-                                <input type="file" id="fotoDiriInput" name="foto_diri" accept="image/*"
-                                    capture="environment" style="display: none;" class="form-control">
+                                <p><span><b>note : </b></span><i style="color: red">Foto Didepan unit, pastikan nomor unit
+                                        terlihat</i></p>
                             </div>
                         </div>
 
+                        <div class="form-group row mb-4">
+                            <label class="col-form-label col-lg-2">Lokasi Geotag</label>
+                            <div class="col-lg-4">
+                                <input type="text" name="lokasi_geotag" class="form-control" readonly>
+                            </div>
+                        </div>
 
                         <div class="form-group row mb-4">
                             <label class="col-form-label col-lg-2">Upload Foto Meteran Air</label>
                             <div class="col-lg-4">
-                                <input type="file" name="foto_meteran_air" class="form-control" accept="image/*">
+                                <label for="fotoDiriInput" class="btn btn-primary">
+                                    📷 Ambil Foto
+                                </label>
                             </div>
                         </div>
 
@@ -74,7 +79,9 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label col-lg-2">Upload Foto Meteran Listrik</label>
                             <div class="col-lg-4">
-                                <input type="file" name="foto_meteran_listrik" class="form-control" accept="image/*">
+                                <label for="fotoDiriInput" class="btn btn-primary">
+                                    📷 Ambil Foto
+                                </label>
                             </div>
                         </div>
 
@@ -128,20 +135,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label col-lg-2">Foto Penghuni Di Depan Unit</label>
-                            <div class="col-lg-4">
-                                <input type="file" name="foto_penghuni" class="form-control" accept="image/*">
-                            </div>
-                        </div>
 
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label col-lg-2">Tanggal Mulai Menghuni</label>
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control" name="tanggal_mulai" id="tanggal_mulai"
-                                    data-provide="datepicker" placeholder="Pilih tanggal">
-                            </div>
-                        </div>
 
                         <div class="form-group row mb-4">
                             <label for="jumlah_kendaraan" class="col-form-label col-lg-2">Jumlah Kendaraan</label>
@@ -178,21 +172,27 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label col-lg-2">Catatan</label>
-                            <div class="col-lg-10">
-                                <textarea id="catatan" name="catatan" class="form-control" rows="5"></textarea>
+                        <div class="mb-3 row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <div
+                                    style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 14px; border-radius: 5px;">
+                                    <p><input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
+                                        Saya menyatakan bahwa data yang Saya sampaikan adalah benar
+                                        sesuai dengan
+                                        keadaan yang sebenarnya.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="form-group row mb-4">
-                            <div class="col-lg-2"></div>
-                            <div class="col-lg-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
-                                    <label class="form-check-label" for="checkbox">
-                                        Checkbox
-                                    </label>
+                        <div class="mb-3 row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <div
+                                    style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 14px; border-radius: 5px;">
+                                    <p><input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
+                                        Saya mengetahui bahwa unit merupakan bagian dari program Pemerintah Provinsi DKI
+                                        Jakarta yang tidak dapat dialihkan sebelum masa yang ditetapkan dalam peraturan</p>
                                 </div>
                             </div>
                         </div>
@@ -208,14 +208,14 @@
         </div>
     </div>
     <!-- end row -->
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('script')
+<?php $__env->startSection('script'); ?>
     <!-- bootstrap datepicker -->
-    <script src="{{ URL::asset('build/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js')); ?>"></script>
 
     <!-- form repeater js -->
-    <script src="{{ URL::asset('build/libs/jquery.repeater/jquery.repeater.min.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/libs/jquery.repeater/jquery.repeater.min.js')); ?>"></script>
 
     <script>
         $(document).ready(function() {
@@ -236,4 +236,6 @@
             });
         });
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master-layouts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views/pages/penerima_manfaat/monitoring-mandiri.blade.php ENDPATH**/ ?>

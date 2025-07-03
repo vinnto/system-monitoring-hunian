@@ -43,24 +43,29 @@
                         </div>
 
                         <div class="form-group row mb-4">
-                            <label class="col-form-label col-lg-2">Upload Foto Diri PM</label>
+                            <label class="col-form-label col-lg-2">Foto Penerima Manfaat</label>
                             <div class="col-lg-4">
-                                <!-- Tombol custom untuk membuka kamera -->
                                 <label for="fotoDiriInput" class="btn btn-primary">
                                     📷 Ambil Foto
                                 </label>
-
-                                <!-- Input tersembunyi yang akan membuka kamera -->
-                                <input type="file" id="fotoDiriInput" name="foto_diri" accept="image/*"
-                                    capture="environment" style="display: none;" class="form-control">
+                                <p><span><b>note : </b></span><i style="color: red">Foto Didepan unit, pastikan nomor unit
+                                        terlihat</i></p>
                             </div>
                         </div>
 
+                        <div class="form-group row mb-4">
+                            <label class="col-form-label col-lg-2">Lokasi Geotag</label>
+                            <div class="col-lg-4">
+                                <input type="text" name="lokasi_geotag" class="form-control" readonly>
+                            </div>
+                        </div>
 
                         <div class="form-group row mb-4">
                             <label class="col-form-label col-lg-2">Upload Foto Meteran Air</label>
                             <div class="col-lg-4">
-                                <input type="file" name="foto_meteran_air" class="form-control" accept="image/*">
+                                <label for="fotoDiriInput" class="btn btn-primary">
+                                    📷 Ambil Foto
+                                </label>
                             </div>
                         </div>
 
@@ -74,7 +79,9 @@
                         <div class="form-group row mb-4">
                             <label class="col-form-label col-lg-2">Upload Foto Meteran Listrik</label>
                             <div class="col-lg-4">
-                                <input type="file" name="foto_meteran_listrik" class="form-control" accept="image/*">
+                                <label for="fotoDiriInput" class="btn btn-primary">
+                                    📷 Ambil Foto
+                                </label>
                             </div>
                         </div>
 
@@ -128,20 +135,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label col-lg-2">Foto Penghuni Di Depan Unit</label>
-                            <div class="col-lg-4">
-                                <input type="file" name="foto_penghuni" class="form-control" accept="image/*">
-                            </div>
-                        </div>
 
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label col-lg-2">Tanggal Mulai Menghuni</label>
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control" name="tanggal_mulai" id="tanggal_mulai"
-                                    data-provide="datepicker" placeholder="Pilih tanggal">
-                            </div>
-                        </div>
 
                         <div class="form-group row mb-4">
                             <label for="jumlah_kendaraan" class="col-form-label col-lg-2">Jumlah Kendaraan</label>
@@ -178,21 +172,27 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-4">
-                            <label class="col-form-label col-lg-2">Catatan</label>
-                            <div class="col-lg-10">
-                                <textarea id="catatan" name="catatan" class="form-control" rows="5"></textarea>
+                        <div class="mb-3 row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <div
+                                    style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 14px; border-radius: 5px;">
+                                    <p><input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
+                                        Saya menyatakan bahwa data yang Saya sampaikan adalah benar
+                                        sesuai dengan
+                                        keadaan yang sebenarnya.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="form-group row mb-4">
-                            <div class="col-lg-2"></div>
-                            <div class="col-lg-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
-                                    <label class="form-check-label" for="checkbox">
-                                        Checkbox
-                                    </label>
+                        <div class="mb-3 row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <div
+                                    style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 14px; border-radius: 5px;">
+                                    <p><input class="form-check-input" type="checkbox" id="checkbox" name="checkbox">
+                                        Saya mengetahui bahwa unit merupakan bagian dari program Pemerintah Provinsi DKI
+                                        Jakarta yang tidak dapat dialihkan sebelum masa yang ditetapkan dalam peraturan</p>
                                 </div>
                             </div>
                         </div>
@@ -238,4 +238,4 @@
     </script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.master-layouts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views\pages\user\monitoring-mandiri.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.master-layouts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\system-monitoring-hunian\resources\views\pages\penerima_manfaat\monitoring-mandiri.blade.php ENDPATH**/ ?>

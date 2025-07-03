@@ -9,6 +9,15 @@ class Hunian extends Model
 {
     use HasFactory;
 
+    protected $fillable
+    = [
+        'lokasi_id',
+        'tower_id',
+        'lantai_id',
+        'no_unit_id',
+        'luas_tipe_id',
+    ];
+
     public function lokasi()
     {
         return $this->belongsTo(Lokasi::class, 'lokasi_id');

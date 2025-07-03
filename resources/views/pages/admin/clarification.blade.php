@@ -20,10 +20,10 @@
 @section('content')
     @component('components.breadcrumb')
         @slot('li_1')
-            Table Klarifikasi
+            Table Pemanggilan
         @endslot
         @slot('title')
-            Klarifikasi
+            Hasil Monitoring
         @endslot
     @endcomponent
 

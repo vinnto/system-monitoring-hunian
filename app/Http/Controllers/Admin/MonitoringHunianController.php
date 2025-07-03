@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\Lokasi;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class MonitoringHunianController extends Controller
 {
@@ -26,5 +25,10 @@ class MonitoringHunianController extends Controller
     public function kuesionerHunian()
     {
         return view('pages.admin.kuesioner-hunian');
+    }
+
+    public function kuesionerMandiri()
+    {
+        return view('pages.admin.monitoring.mandiri');
     }
 }

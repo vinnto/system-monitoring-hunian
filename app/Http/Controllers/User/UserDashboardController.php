@@ -9,16 +9,16 @@ class UserDashboardController extends Controller
 {
     public function index()
     {
-        return view('pages.user.index');
+        return view('pages.penerima_manfaat.index');
     }
 
     public function profilePenerimaManfaat()
     {
-        return view('pages.user.profile-pm');
+        return view('pages.penerima_manfaat.profile-pm');
     }
 
     public function help()
     {
-        return view('pages.user.help');
+        return view('pages.penerima_manfaat.help');
     }
 }
